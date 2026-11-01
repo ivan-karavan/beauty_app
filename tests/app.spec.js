@@ -18,7 +18,7 @@ test.beforeEach(async ({ page }) => {
   await page.goto("./");
 });
 
-test("loads catalog, updates occasions, opens details and uses correct collage", async ({
+test("loads catalog, updates occasions and opens details", async ({
   page,
 }) => {
   await expect(
@@ -42,6 +42,94 @@ test("loads catalog, updates occasions, opens details and uses correct collage",
   await expect(
     page.getByRole("button", { name: "Сливочный + шоколадный" }).locator("img"),
   ).toHaveCount(1);
+});
+
+test("look cards show full-width artwork and details retain original photographs", async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 740 });
+  const card = page.getByRole("button", { name: "Голубой + тёмный", exact: true });
+  await expect(card.locator("img")).toHaveCount(1);
+  const catalog = await page.request.get("looks/looks.json").then(response => response.json());
+  const look = catalog.looks.find(look => look.id === 1);
+  await expect(card.locator("img")).toHaveAttribute("src", look.preview);
+  const artwork = await card.locator("img").boundingBox();
+  const copy = await card.locator(".look-copy").boundingBox();
+  const bounds = await card.boundingBox();
+  expect(artwork.width).toBeGreaterThan(bounds.width - 4);
+  expect(artwork.height).toBeGreaterThan(artwork.width);
+  expect(copy.y).toBeGreaterThanOrEqual(artwork.y + artwork.height);
+  await card.click();
+  const dialog = page.getByRole("dialog");
+  await expect(dialog.locator(".look-artwork img")).toHaveAttribute("src", look.preview);
+  await expect(dialog.getByRole("heading", { name: "Исходные фотографии" })).toBeVisible();
+  const originals = dialog.locator(".look-originals figure");
+  await expect(originals).toHaveCount(look.items.length);
+  for (const [index, id] of look.items.entries()) {
+    const item = catalog.items[id];
+    await expect(originals.nth(index).locator("img")).toHaveAttribute("src", item.file);
+    await expect(originals.nth(index).locator("img")).toHaveAttribute("alt", item.name);
+    await expect(originals.nth(index).locator("img")).toHaveAttribute("style", `transform:rotate(${item.rotation || 0}deg)`);
+    await expect(originals.nth(index).locator("figcaption")).toHaveText(item.name);
+  }
+});
+
+test("suggested additions are marked outside the wardrobe and complex looks have a badge", async ({ page }) => {
+  const catalog = await page.request.get("looks/looks.json").then(response => response.json());
+  const card = page.getByRole("button", { name: "Голубой + тёмный", exact: true });
+  await expect(card).toContainText("Дополнить:");
+  await expect(card).toContainText("Вне каталога");
+  const look = catalog.looks.find(look => look.id === 1);
+  expect(look.additions).toHaveLength(3);
+  for (const addition of look.additions) await expect(card).toContainText(addition.name);
+  await card.click();
+  const additions = page.getByRole("dialog").getByRole("region", { name: "Чего не хватает" });
+  await expect(additions).toContainText("Предлагаемые дополнения — их нет в каталоге.");
+  await expect(additions.locator("li")).toHaveCount(look.additions.length);
+  for (const addition of look.additions) await expect(additions).toContainText(addition.name);
+  await page.getByRole("button", { name: "Закрыть" }).click();
+  const complex = catalog.looks.find(look => look.extended);
+  expect(complex).toBeTruthy();
+  await page.locator(`[data-occasion="${complex.scenarios.some(value => value.startsWith("Театр")) ? "evening" : "everyday"}"]`).click();
+  await page.getByRole("button", { name: "Сменить основу" }).click();
+  await page.locator(`[data-base="${complex.items[0]}"]`).click();
+  await expect(page.locator(`[data-look="${complex.id}"]`)).toContainText("Сложный образ · С дополнениями");
+});
+
+test("every prepared look uses its artwork, marks additions and keeps owned garment photos", async ({ page }) => {
+  const catalog = await page.request.get("looks/looks.json").then(response => response.json());
+  for (const look of catalog.looks) {
+    const occasion = look.scenarios.some(value => value.startsWith("Театр")) ? "evening" : "everyday";
+    await page.locator(`[data-occasion="${occasion}"]`).click();
+    await page.getByRole("button", { name: "Сменить основу" }).click();
+    await page.locator(`[data-base="${look.items[0]}"]`).click();
+    const card = page.locator(`[data-look="${look.id}"]`);
+    await expect(card.locator("img")).toHaveCount(1);
+    await expect(card.locator("img")).toHaveAttribute("src", look.preview);
+    await expect(card).toContainText("Дополнить:");
+    await expect(card).toContainText("Вне каталога");
+    for (const addition of look.additions) await expect(card).toContainText(addition.name);
+    if (look.extended) await expect(card).toContainText("Сложный образ · С дополнениями");
+    await card.click();
+    const dialog = page.getByRole("dialog");
+    const artwork = dialog.locator(".look-artwork img");
+    await expect(artwork).toHaveAttribute("src", look.preview);
+    await artwork.scrollIntoViewIfNeeded();
+    await expect.poll(() => artwork.evaluate(img => img.complete && img.naturalWidth > 0), {
+      message: `Look ${look.id} (${look.title}): ${look.preview} must load`,
+    }).toBe(true);
+    const additions = dialog.getByRole("region", { name: "Чего не хватает" });
+    await expect(additions.locator("li")).toHaveCount(look.additions.length);
+    for (const addition of look.additions) await expect(additions).toContainText(addition.name);
+    const originals = dialog.locator(".look-originals figure");
+    await expect(originals).toHaveCount(look.items.length);
+    for (const [index, id] of look.items.entries()) {
+      const item = catalog.items[id];
+      await expect(originals.nth(index).locator("img")).toHaveAttribute("src", item.file);
+      await expect(originals.nth(index).locator("img")).toHaveAttribute("alt", item.name);
+      await expect(originals.nth(index).locator("img")).toHaveAttribute("style", `transform:rotate(${item.rotation || 0}deg)`);
+      await expect(originals.nth(index).locator("figcaption")).toHaveText(item.name);
+    }
+    await page.getByRole("button", { name: "Закрыть" }).click();
+  }
 });
 
 test("wardrobe filters and item action change the required base", async ({
@@ -149,6 +237,11 @@ test("all visible assets load and page fits a narrow screen", async ({
       () => document.documentElement.scrollWidth <= innerWidth,
     ),
   ).toBe(true);
+  for (const image of await page.locator("main img").all()) {
+    await image.scrollIntoViewIfNeeded();
+    await expect.poll(() => image.evaluate(img => img.complete && img.naturalWidth > 0),
+      { message: await image.getAttribute("src") }).toBe(true);
+  }
   await page.getByRole("button", { name: "Гардероб", exact: true }).click();
   await expect(page.getByTestId("item-card")).toHaveCount(70);
   for (const image of await page.locator("main img").all()) {
@@ -247,7 +340,7 @@ test("newly catalogued clothes participate in prepared looks", async ({
     "Для этой вещи есть готовые сочетания",
   );
   await page.getByRole("button", { name: "Образы с этой вещью" }).click();
-  await expect(page.getByTestId("look-card")).toHaveCount(1);
+  await expect(page.getByTestId("look-card")).toHaveCount(2);
   await page.getByRole("button", { name: "Гардероб", exact: true }).click();
   await page.getByRole("button", { name: "Новые фото", exact: true }).click();
   await expect(page.getByTestId("item-card")).toHaveCount(0);

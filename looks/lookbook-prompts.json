@@ -1,0 +1,2159 @@
+{
+  "tool": "built-in image_gen",
+  "styleReference": "looks/accessories-casual.png",
+  "promptTemplate": "Use case: compositing, fashion product lookbook. Create ONE polished PORTRAIT 4:5 flat-lay outfit image for a wardrobe app. Image1 is STYLE REFERENCE ONLY: warm ivory paper background, subtle studio shadows, an elegant realistic main clothing silhouette on the LEFT two-thirds and a coordinated smaller accessory column on the RIGHT third. Do not copy garments from the style reference. Images2 onward are the EXACT OWNED GARMENTS named below: preserve their real colour, cut, proportions, pockets, fastenings, neckline, sleeve/leg shapes, distinctive texture and existing printed designs. Remove original bed, blanket, hangers, incidental other clothing at image edges and photo rectangles. Arrange main garments upright as one coherent wearable outfit, with believable layering and gentle folds, no person, no visible mannequin or body parts. ALSO ADD the explicitly listed supplemental clothing (if any) as part of the main outfit, AND render EVERY listed suggested accessory as its own visible object in the right column. These extras are creative suggestions, not owned clothes; their ownership labels are supplied by the app, so DO NOT write labels or any other text in the image. Keep clothing identity faithful; missing clothes and accessories may be newly designed but follow the exact colour/type descriptions below. A scarf should have natural folded/draped shape, earrings shown as a pair, bag in proportion. Do not add anything beyond the listed owned clothes and listed additions. No borders, headline, caption, numbers, watermark, interface, shop logo, extra humans or duplicate clothes. Entire garments and all accessories visible with clear 5% margins, professionally styled like the reference, detailed but uncluttered.",
+  "promptAssembly": "Template + OWNED GARMENTS (Image2+ source.name) + SUPPLEMENTAL CLOTHING(type=clothing) + SUGGESTED ACCESSORIES(type=accessory) + WEARING/LAYERING GUIDE(wear).",
+  "looks": [
+    {
+      "id": 1,
+      "title": "Голубой + тёмный",
+      "preview": "looks/previews/look-001-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 35,
+          "name": "Голубая рубашка",
+          "file": "clothes_photos/photo_2026-11-01 14.59.22.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 49,
+          "name": "Тёмные широкие брюки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.34.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Заправь рубашку полностью и слегка выпусти ткань над поясом. Расстегни одну-две верхние пуговицы, если комфортно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 2,
+      "title": "Розовый + серый",
+      "preview": "looks/previews/look-002-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 34,
+          "name": "Розовая рубашка",
+          "file": "clothes_photos/photo_2026-11-01 14.59.22 (1).jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 47,
+          "name": "Серые брюки со складками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.32.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Рубашку заправь. Если ткани много, расправь её по бокам, чтобы спереди не возникал объём.",
+      "additions": [
+        {
+          "name": "Бордовая сумка с короткими ручками",
+          "type": "accessory"
+        },
+        {
+          "name": "Светло-серый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие серебристые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 3,
+      "title": "Сливочный + шоколадный",
+      "preview": "looks/previews/look-003-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 66,
+          "name": "Белая водолазка",
+          "file": "clothes_photos/photo_2026-11-01 14.59.49.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 25,
+          "name": "Коричневый приталенный сарафан",
+          "file": "clothes_photos/photo_2026-11-01 14.59.13.jpeg",
+          "rotation": -90
+        }
+      ],
+      "wear": "Водолазка под сарафан. Проверь, чтобы ткань не собиралась под проймами и на талии.",
+      "additions": [
+        {
+          "name": "Тёмно-коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Платок цвета экрю с коричневым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 4,
+      "title": "Клетка и чистая линия",
+      "preview": "looks/previews/look-004-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 60,
+          "name": "Чёрный облегающий лонгслив",
+          "file": "clothes_photos/photo_2026-11-01 14.59.43.jpeg",
+          "rotation": 90
+        },
+        {
+          "id": 18,
+          "name": "Юбка в чёрно-белую клетку",
+          "file": "clothes_photos/photo_2026-11-01 14.59.08 (1).jpeg",
+          "rotation": -90
+        }
+      ],
+      "wear": "Заправь лонгслив в юбку. Объёмный ремень здесь не нужен: линия пояса уже делит образ.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 5,
+      "title": "Рубашка под жилетом",
+      "preview": "looks/previews/look-005-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 24,
+          "name": "Белая рубашка",
+          "file": "clothes_photos/photo_2026-11-01 14.59.13 (1).jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 26,
+          "name": "Тёмный трикотажный жилет",
+          "file": "clothes_photos/photo_2026-11-01 14.59.14.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 49,
+          "name": "Тёмные широкие брюки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.34.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Рубашку заправь, жилет оставь поверх. Если он закрывает талию и выглядит свободно, слегка подверни край внутрь — только если он держится.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 6,
+      "title": "Чёрный с акцентом на талии",
+      "preview": "looks/previews/look-006-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 19,
+          "name": "Чёрный жакет с поясом и прозрачными вставками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.08.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 15,
+          "name": "Чёрная юбка с асимметричным низом",
+          "file": "clothes_photos/photo_2026-11-01 14.59.05.jpeg",
+          "rotation": -90
+        }
+      ],
+      "wear": "Завяжи пояс на естественной талии. Если вырез раскрывается, добавь имеющийся чёрный топ №32 под жакет.",
+      "additions": [
+        {
+          "name": "Маленькая чёрная сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Серебристые серьги-кольца",
+          "type": "accessory"
+        },
+        {
+          "name": "Чёрные закрытые туфли",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 7,
+      "title": "Прозрачность и блеск",
+      "preview": "looks/previews/look-007-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 31,
+          "name": "Чёрная прозрачная блуза",
+          "file": "clothes_photos/photo_2026-11-01 14.59.19.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 32,
+          "name": "Чёрный топ на тонких бретелях",
+          "file": "clothes_photos/photo_2026-11-01 14.59.20.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 29,
+          "name": "Тёмная юбка с атласным блеском",
+          "file": "clothes_photos/photo_2026-11-01 14.59.17.jpeg",
+          "rotation": -90
+        }
+      ],
+      "wear": "Топ надень под блузу. Блузу аккуратно заправь; не затягивай ткань так, чтобы она натягивалась на пуговицах.",
+      "additions": [
+        {
+          "name": "Маленькая чёрная сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Серебристые серьги-кольца",
+          "type": "accessory"
+        },
+        {
+          "name": "Чёрные закрытые туфли",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 8,
+      "title": "Графичный сарафан",
+      "preview": "looks/previews/look-008-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 66,
+          "name": "Белая водолазка",
+          "file": "clothes_photos/photo_2026-11-01 14.59.49.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 17,
+          "name": "Тёмный сарафан на бретелях",
+          "file": "clothes_photos/photo_2026-11-01 14.59.07.jpeg",
+          "rotation": -90
+        }
+      ],
+      "wear": "Водолазка под сарафан; проверь свободу в груди и проймах. Если сарафан прямой, талию можно обозначить тонким ремнём.",
+      "additions": [
+        {
+          "name": "Маленькая чёрная сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Серебристые серьги-кольца",
+          "type": "accessory"
+        },
+        {
+          "name": "Чёрные закрытые туфли",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 9,
+      "title": "Леопард без перегруза",
+      "preview": "looks/previews/look-009-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 30,
+          "name": "Леопардовый верх на молнии",
+          "file": "clothes_photos/photo_2026-11-01 14.59.18.jpeg",
+          "rotation": 0
+        },
+        {
+          "id": 49,
+          "name": "Тёмные широкие брюки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.34.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Носи верх застёгнутым настолько, насколько комфортно. Проверь, чтобы между ним и поясом брюк не оставался открытый участок на холоде.",
+      "additions": [
+        {
+          "name": "Чёрная сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Однотонный шарф цвета экрю",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие серебристые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 10,
+      "title": "Горчичный + серый",
+      "preview": "looks/previews/look-010-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 38,
+          "name": "Горчичный верх с вырезом у горловины",
+          "file": "clothes_photos/photo_2026-11-01 14.59.25.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 47,
+          "name": "Серые брюки со складками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.32.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Заправь верх в брюки, сохранив ровную линию пояса. Не закрывай вырез массивным ожерельем.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 11,
+      "title": "Полоска + деним",
+      "preview": "looks/previews/look-011-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 40,
+          "name": "Джемпер в сине-белую полоску",
+          "file": "clothes_photos/photo_2026-11-01 14.59.27 (1).jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 53,
+          "name": "Синие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.37.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Если джемпер достаточно тонкий, слегка заправь его спереди. Если плотный — оставь свободно, не создавая комок на талии.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 12,
+      "title": "Синий свитер + джинсы",
+      "preview": "looks/previews/look-012-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 39,
+          "name": "Свитер с широкими цветными полосами",
+          "file": "clothes_photos/photo_2026-11-01 14.59.26.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 53,
+          "name": "Синие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.37.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Оставь свитер навыпуск. Это намеренно более свободный образ; при желании слегка обозначь талию частичной заправкой.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 13,
+      "title": "Светлое худи в дорогу",
+      "preview": "looks/previews/look-013-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 46,
+          "name": "Светлое худи",
+          "file": "clothes_photos/photo_2026-11-01 14.59.31.jpeg",
+          "rotation": 0
+        },
+        {
+          "id": 53,
+          "name": "Синие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.37.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Худи оставь навыпуск. Это комфортный свободный вариант; приталенность здесь уступает удобству в дороге.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 14,
+      "title": "Светлые слои",
+      "preview": "looks/previews/look-014-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 66,
+          "name": "Белая водолазка",
+          "file": "clothes_photos/photo_2026-11-01 14.59.49.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 22,
+          "name": "Светлый кардиган на пуговицах",
+          "file": "clothes_photos/photo_2026-11-01 14.59.11.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 47,
+          "name": "Серые брюки со складками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.32.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Водолазку заправь. Кардиган оставь расстёгнутым, чтобы была видна талия; если застёгиваешь, проверь, не тянет ли планку.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 15,
+      "title": "Светлая блуза + тёмная юбка",
+      "preview": "looks/previews/look-015-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 23,
+          "name": "Светлая блуза с завязками у горловины",
+          "file": "clothes_photos/photo_2026-11-01 14.59.12.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 29,
+          "name": "Тёмная юбка с атласным блеском",
+          "file": "clothes_photos/photo_2026-11-01 14.59.17.jpeg",
+          "rotation": -90
+        }
+      ],
+      "wear": "Заправь блузу, расправь ткань над поясом. Завязки у горловины оставь свободными или завяжи небольшим узлом.",
+      "additions": [
+        {
+          "name": "Маленькая чёрная сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Серебристые серьги-кольца",
+          "type": "accessory"
+        },
+        {
+          "name": "Чёрные закрытые туфли",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 16,
+      "title": "Прилегающий верх + широкие брюки",
+      "preview": "looks/previews/look-016-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 59,
+          "name": "Серо-голубой лонгслив",
+          "file": "clothes_photos/photo_2026-11-01 14.59.43 (1).jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 49,
+          "name": "Тёмные широкие брюки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.34.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Заправь лонгслив; если он короткий, проверь, остаётся ли закрыта талия при движении.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 17,
+      "title": "Голубой, бежевый и тёмный слой",
+      "preview": "looks/previews/look-017-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 1,
+          "name": "Серо-голубая футболка",
+          "file": "clothes_photos/photo_2026-11-01 14.58.54.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 44,
+          "name": "Бежевые широкие брюки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.30 (1).jpeg",
+          "rotation": 0
+        },
+        {
+          "id": 69,
+          "name": "Тёмная куртка-рубашка с накладными карманами",
+          "file": "clothes_photos/photo_2026-11-01 16.58.37.jpeg",
+          "rotation": 180
+        }
+      ],
+      "wear": "Футболка под куртку-рубашку. Оставь внешний слой расстёгнутым; проверь свободу плеч при движении.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 18,
+      "title": "Белая футболка и светлая фактура",
+      "preview": "looks/previews/look-018-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 2,
+          "name": "Белая футболка с круглым вырезом",
+          "file": "clothes_photos/photo_2026-11-01 14.58.55.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0
+        },
+        {
+          "id": 68,
+          "name": "Светлая фактурная кофта на молнии",
+          "file": "clothes_photos/photo_2026-11-01 16.58.36.jpeg",
+          "rotation": 180
+        }
+      ],
+      "wear": "Кофту надень поверх футболки. Перед выходом проверь, удобно ли сидеть и двигаться в джинсах.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 19,
+      "title": "Принт и светлый деним",
+      "preview": "looks/previews/look-019-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 3,
+          "name": "Белая футболка с принтом Volunteer Program",
+          "file": "clothes_photos/photo_2026-11-01 14.58.56.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 48,
+          "name": "Светло-голубые брюки на резинке",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Футболку оставь свободно или слегка заправь спереди, если так удобнее.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 20,
+      "title": "Ярко-зелёный и серый",
+      "preview": "looks/previews/look-020-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 4,
+          "name": "Ярко-зелёная футболка с надписью",
+          "file": "clothes_photos/photo_2026-11-01 14.58.57 (1).jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Носи футболку свободно. Проверь длину джинсов и свободу шага.",
+      "additions": [
+        {
+          "name": "Чёрная сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Однотонный шарф цвета экрю",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие серебристые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 21,
+      "title": "Белый топ под тёмным жакетом",
+      "preview": "looks/previews/look-021-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 5,
+          "name": "Белый топ на широких бретелях",
+          "file": "clothes_photos/photo_2026-11-01 14.58.57.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 44,
+          "name": "Бежевые широкие брюки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.30 (1).jpeg",
+          "rotation": 0
+        },
+        {
+          "id": 20,
+          "name": "Тёмный жакет с завязками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.09.jpeg",
+          "rotation": -90
+        }
+      ],
+      "wear": "Топ под жакет, жакет можно оставить открытым. Проверь посадку в плечах и рукавах.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 22,
+      "title": "Розовая футболка и голубые брюки",
+      "preview": "looks/previews/look-022-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 6,
+          "name": "Светло-розовая футболка с маленьким рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.58.58 (1).jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 48,
+          "name": "Светло-голубые брюки на резинке",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Футболку можно оставить навыпуск. Посадку и удобство пояса проверь сидя.",
+      "additions": [
+        {
+          "name": "Бордовая сумка с короткими ручками",
+          "type": "accessory"
+        },
+        {
+          "name": "Светло-серый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие серебристые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 23,
+      "title": "Зелёный рисунок и бежевый низ",
+      "preview": "looks/previews/look-023-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 7,
+          "name": "Зелёная футболка с рисунком рук",
+          "file": "clothes_photos/photo_2026-11-01 14.58.58.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 44,
+          "name": "Бежевые широкие брюки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.30 (1).jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Сохрани рисунок открытым. Для движения проверь, не стягивает ли верх плечи.",
+      "additions": [
+        {
+          "name": "Тёмно-коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Платок цвета экрю с коричневым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 24,
+      "title": "Ярко-розовый и серый деним",
+      "preview": "looks/previews/look-024-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 8,
+          "name": "Ярко-розовая футболка",
+          "file": "clothes_photos/photo_2026-11-01 14.58.59.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Оставь футболку свободно или заправь только край спереди, если ткань не собирается под поясом.",
+      "additions": [
+        {
+          "name": "Бордовая сумка с короткими ручками",
+          "type": "accessory"
+        },
+        {
+          "name": "Светло-серый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие серебристые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 25,
+      "title": "Мята под тёмным слоем",
+      "preview": "looks/previews/look-025-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 9,
+          "name": "Мятная футболка",
+          "file": "clothes_photos/photo_2026-11-01 14.59.00 (1).jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 48,
+          "name": "Светло-голубые брюки на резинке",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0
+        },
+        {
+          "id": 69,
+          "name": "Тёмная куртка-рубашка с накладными карманами",
+          "file": "clothes_photos/photo_2026-11-01 16.58.37.jpeg",
+          "rotation": 180
+        }
+      ],
+      "wear": "Куртку-рубашку надень поверх футболки. Проверь, удобно ли сгибать руки в двух слоях.",
+      "additions": [
+        {
+          "name": "Тёмно-коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Платок цвета экрю с коричневым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 26,
+      "title": "Светло-розовый топ и тёмный блеск",
+      "preview": "looks/previews/look-026-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 10,
+          "name": "Светло-розовый топ с высоким воротом",
+          "file": "clothes_photos/photo_2026-11-01 14.59.00.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 29,
+          "name": "Тёмная юбка с атласным блеском",
+          "file": "clothes_photos/photo_2026-11-01 14.59.17.jpeg",
+          "rotation": -90
+        }
+      ],
+      "wear": "Топ аккуратно заправь, если это не создаёт складок. Проверь свободу шага в юбке.",
+      "additions": [
+        {
+          "name": "Бордовая сумка с короткими ручками",
+          "type": "accessory"
+        },
+        {
+          "name": "Светло-серый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие серебристые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 27,
+      "title": "Белый V-вырез и серые джинсы",
+      "preview": "looks/previews/look-027-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 11,
+          "name": "Белая футболка с V-образным вырезом",
+          "file": "clothes_photos/photo_2026-11-01 14.59.02.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Носи футболку так, как удобнее: свободно или с частичной заправкой. Посадку проверь в движении.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 28,
+      "title": "Белый реглан и бежевые брюки",
+      "preview": "looks/previews/look-028-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 12,
+          "name": "Белая футболка с рукавом реглан",
+          "file": "clothes_photos/photo_2026-11-01 14.59.03.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 44,
+          "name": "Бежевые широкие брюки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.30 (1).jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Не затягивай заправку, если она ограничивает движение. Проверь длину широких брючин.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 29,
+      "title": "Сиреневая вязка и светлый деним",
+      "preview": "looks/previews/look-029-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 13,
+          "name": "Чёрный топ на широких бретелях",
+          "file": "clothes_photos/photo_2026-11-01 14.59.04 (1).jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 51,
+          "name": "Сиреневый джемпер крупной вязки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.36.jpeg",
+          "rotation": 90
+        },
+        {
+          "id": 48,
+          "name": "Светло-голубые брюки на резинке",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Топ под джемпер. Проверь, хватает ли места в плечах и комфортно ли сочетание двух слоёв.",
+      "additions": [
+        {
+          "name": "Бордовая сумка с короткими ручками",
+          "type": "accessory"
+        },
+        {
+          "name": "Светло-серый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие серебристые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 30,
+      "title": "Бордовая футболка и серый деним",
+      "preview": "looks/previews/look-030-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 14,
+          "name": "Бордовая футболка с рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.59.04.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Оставь футболку свободно. Проверь, не мешает ли пояс джинсов при долгом сидении.",
+      "additions": [
+        {
+          "name": "Бордовая сумка с короткими ручками",
+          "type": "accessory"
+        },
+        {
+          "name": "Светло-серый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие серебристые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 31,
+      "title": "Красное платье под тёмным жакетом",
+      "preview": "looks/previews/look-031-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 16,
+          "name": "Красное платье с мелким рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.59.06.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 20,
+          "name": "Тёмный жакет с завязками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.09.jpeg",
+          "rotation": -90
+        }
+      ],
+      "wear": "Жакет можно оставить открытым. Проверь, не собираются ли рукава платья под жакетом.",
+      "additions": [
+        {
+          "name": "Маленькая чёрная сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Серебристые серьги-кольца",
+          "type": "accessory"
+        },
+        {
+          "name": "Чёрные закрытые туфли",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 32,
+      "title": "Тёмное платье без лишних слоёв",
+      "preview": "looks/previews/look-032-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 21,
+          "name": "Тёмное платье с рукавами",
+          "file": "clothes_photos/photo_2026-11-01 14.59.10.jpeg",
+          "rotation": -90
+        }
+      ],
+      "wear": "Проверь посадку в талии, свободу рук и удобство сидя. Дополнительные вещи в этот образ не включены.",
+      "additions": [
+        {
+          "name": "Маленькая чёрная сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Серебристые серьги-кольца",
+          "type": "accessory"
+        },
+        {
+          "name": "Чёрные закрытые туфли",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 33,
+      "title": "Светлая блуза и бежевые брюки",
+      "preview": "looks/previews/look-033-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 27,
+          "name": "Светлая блуза с длинными рукавами",
+          "file": "clothes_photos/photo_2026-11-01 14.59.15.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 44,
+          "name": "Бежевые широкие брюки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.30 (1).jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Блузу можно слегка заправить спереди, если она не собирается под поясом. Проверь свободу движений.",
+      "additions": [
+        {
+          "name": "Маленькая чёрная сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Серебристые серьги-кольца",
+          "type": "accessory"
+        },
+        {
+          "name": "Чёрные закрытые туфли",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 34,
+      "title": "Мелкий узор и тёмная юбка",
+      "preview": "looks/previews/look-034-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 28,
+          "name": "Тёмный топ на бретелях с мелким узором",
+          "file": "clothes_photos/photo_2026-11-01 14.59.16.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 29,
+          "name": "Тёмная юбка с атласным блеском",
+          "file": "clothes_photos/photo_2026-11-01 14.59.17.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 20,
+          "name": "Тёмный жакет с завязками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.09.jpeg",
+          "rotation": -90
+        }
+      ],
+      "wear": "Топ под жакет. Проверь посадку бретелей и свободу рук; жакет можно не застёгивать.",
+      "additions": [
+        {
+          "name": "Маленькая чёрная сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Серебристые серьги-кольца",
+          "type": "accessory"
+        },
+        {
+          "name": "Чёрные закрытые туфли",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 35,
+      "title": "Тёмно-зелёное платье и светлый жилет",
+      "preview": "looks/previews/look-035-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 33,
+          "name": "Тёмно-зелёное платье с длинными рукавами",
+          "file": "clothes_photos/photo_2026-11-01 14.59.21.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 70,
+          "name": "Светлый стёганый жилет",
+          "file": "clothes_photos/photo_2026-11-01 16.58.39.jpeg",
+          "rotation": -90
+        }
+      ],
+      "wear": "Жилет надень поверх платья. Проверь свободу в проймах и не мешает ли длина платья шагу.",
+      "additions": [
+        {
+          "name": "Тёмно-коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Платок цвета экрю с коричневым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 36,
+      "title": "Полосатая рубашка и серый деним",
+      "preview": "looks/previews/look-036-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 36,
+          "name": "Светлая рубашка в красную полоску",
+          "file": "clothes_photos/photo_2026-11-01 14.59.23.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Рубашку можно заправить частично. Проверь, чтобы планка не натягивалась при движении.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 37,
+      "title": "Красный верх и светлая основа",
+      "preview": "looks/previews/look-037-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 37,
+          "name": "Красный укороченный верх на молнии",
+          "file": "clothes_photos/photo_2026-11-01 14.59.24.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 5,
+          "name": "Белый топ на широких бретелях",
+          "file": "clothes_photos/photo_2026-11-01 14.58.57.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 48,
+          "name": "Светло-голубые брюки на резинке",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Белый топ под верх на молнии. Проверь, остаётся ли закрыта талия, когда поднимаешь руки.",
+      "additions": [
+        {
+          "name": "Чёрная сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Однотонный шарф цвета экрю",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие серебристые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 38,
+      "title": "Голубой рисунок и серые джинсы",
+      "preview": "looks/previews/look-038-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 41,
+          "name": "Голубой свитшот с рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.59.27.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Свитшот оставь свободно. Проверь длину джинсов и удобство пояса.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 39,
+      "title": "Зелёные рукава и светлые брюки",
+      "preview": "looks/previews/look-039-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 42,
+          "name": "Серо-зелёное худи",
+          "file": "clothes_photos/photo_2026-11-01 14.59.28.jpeg",
+          "rotation": 0
+        },
+        {
+          "id": 48,
+          "name": "Светло-голубые брюки на резинке",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Худи носи навыпуск. Проверь, удобно ли двигаться в плечах и сидеть в брюках.",
+      "additions": [
+        {
+          "name": "Тёмно-коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Платок цвета экрю с коричневым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 40,
+      "title": "Тёмное худи и бежевые брюки",
+      "preview": "looks/previews/look-040-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 43,
+          "name": "Тёмное худи с маленьким рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.59.29.jpeg",
+          "rotation": 0
+        },
+        {
+          "id": 44,
+          "name": "Бежевые широкие брюки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.30 (1).jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Худи оставь свободно. Проверь длину широких брючин и свободу шага.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 41,
+      "title": "Синее худи и серые джинсы",
+      "preview": "looks/previews/look-041-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 45,
+          "name": "Синее худи с рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.59.30.jpeg",
+          "rotation": 0
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Носи худи навыпуск. Удобство капюшона и посадку проверь перед долгой поездкой.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 42,
+      "title": "Белая футболка с рисунком и голубой низ",
+      "preview": "looks/previews/look-042-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 52,
+          "name": "Белая футболка с маленьким красным рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.59.37 (1).jpeg",
+          "rotation": 90
+        },
+        {
+          "id": 48,
+          "name": "Светло-голубые брюки на резинке",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Оставь футболку свободно или слегка заправь спереди. Проверь комфорт сидя.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 43,
+      "title": "Тёмные разводы и бежевый низ",
+      "preview": "looks/previews/look-043-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 54,
+          "name": "Тёмный лонгслив с разводами",
+          "file": "clothes_photos/photo_2026-11-01 14.59.38.jpeg",
+          "rotation": 90
+        },
+        {
+          "id": 44,
+          "name": "Бежевые широкие брюки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.30 (1).jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Проверь посадку верха при поднятых руках. Заправляй его только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 44,
+      "title": "Рубашка с рисунком и серый деним",
+      "preview": "looks/previews/look-044-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 55,
+          "name": "Синяя рубашка с рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.59.39.jpeg",
+          "rotation": 90
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Рубашку можно носить свободно. Проверь планку и рукава в движении.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 45,
+      "title": "Сиреневый лонгслив и бежевые брюки",
+      "preview": "looks/previews/look-045-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 56,
+          "name": "Сиреневый лонгслив",
+          "file": "clothes_photos/photo_2026-11-01 14.59.40.jpeg",
+          "rotation": 90
+        },
+        {
+          "id": 44,
+          "name": "Бежевые широкие брюки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.30 (1).jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Лонгслив можно заправить, если он остаётся на месте при движении. Проверь, не давит ли пояс.",
+      "additions": [
+        {
+          "name": "Бордовая сумка с короткими ручками",
+          "type": "accessory"
+        },
+        {
+          "name": "Светло-серый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие серебристые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 46,
+      "title": "Белый лонгслив и голубые брюки",
+      "preview": "looks/previews/look-046-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 57,
+          "name": "Белый лонгслив с маленьким красным рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.59.41 (1).jpeg",
+          "rotation": 90
+        },
+        {
+          "id": 48,
+          "name": "Светло-голубые брюки на резинке",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Выбери свободную или частичную заправку по удобству. Проверь посадку сидя.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 47,
+      "title": "Ярко-розовый лонгслив и серые джинсы",
+      "preview": "looks/previews/look-047-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 58,
+          "name": "Ярко-розовый лонгслив",
+          "file": "clothes_photos/photo_2026-11-01 14.59.41.jpeg",
+          "rotation": 90
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Сохрани удобную свободу в талии и плечах; заправка здесь необязательна.",
+      "additions": [
+        {
+          "name": "Бордовая сумка с короткими ручками",
+          "type": "accessory"
+        },
+        {
+          "name": "Светло-серый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие серебристые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 48,
+      "title": "Тёмно-серый верх и бежевые брюки",
+      "preview": "looks/previews/look-048-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 61,
+          "name": "Тёмно-серый лонгслив",
+          "file": "clothes_photos/photo_2026-11-01 14.59.44.jpeg",
+          "rotation": 90
+        },
+        {
+          "id": 44,
+          "name": "Бежевые широкие брюки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.30 (1).jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Проверь, остаётся ли закрыта талия при движении. Брючины не должны мешать шагу.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 49,
+      "title": "Тёмно-синий верх и светлый деним",
+      "preview": "looks/previews/look-049-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 62,
+          "name": "Тёмно-синий лонгслив",
+          "file": "clothes_photos/photo_2026-11-01 14.59.45.jpeg",
+          "rotation": 90
+        },
+        {
+          "id": 48,
+          "name": "Светло-голубые брюки на резинке",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Лонгслив можно заправить или оставить свободно. Проверь комфорт в плечах.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 50,
+      "title": "Тонкая полоска и бежевый низ",
+      "preview": "looks/previews/look-050-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 63,
+          "name": "Лонгслив в тонкую сине-белую полоску",
+          "file": "clothes_photos/photo_2026-11-01 14.59.46.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 44,
+          "name": "Бежевые широкие брюки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.30 (1).jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Оставь верх свободно либо слегка заправь спереди. Проверь длину брючин.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 51,
+      "title": "Чёрно-белая полоска и голубые брюки",
+      "preview": "looks/previews/look-051-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 64,
+          "name": "Лонгслив в чёрно-белую полоску",
+          "file": "clothes_photos/photo_2026-11-01 14.59.47.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 48,
+          "name": "Светло-голубые брюки на резинке",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Не затягивай заправку. Посадку и свободу движений проверь сидя и при ходьбе.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 52,
+      "title": "Светлый лонгслив под стёганым жилетом",
+      "preview": "looks/previews/look-052-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 65,
+          "name": "Светлый лонгслив с круглым вырезом",
+          "file": "clothes_photos/photo_2026-11-01 14.59.48.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0
+        },
+        {
+          "id": 70,
+          "name": "Светлый стёганый жилет",
+          "file": "clothes_photos/photo_2026-11-01 16.58.39.jpeg",
+          "rotation": -90
+        }
+      ],
+      "wear": "Жилет поверх лонгслива. Проверь проймы и удобство двух слоёв при движении.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый однотонный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 53,
+      "title": "Розовая полоска и серый деним",
+      "preview": "looks/previews/look-053-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 67,
+          "name": "Лонгслив в розово-белую полоску",
+          "file": "clothes_photos/photo_2026-11-01 14.59.50.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Носи лонгслив свободно или с частичной заправкой. Проверь удобство пояса и свободу рук.",
+      "additions": [
+        {
+          "name": "Бордовая сумка с короткими ручками",
+          "type": "accessory"
+        },
+        {
+          "name": "Светло-серый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие серебристые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false
+    },
+    {
+      "id": 54,
+      "title": "Красный акцент и длинное пальто",
+      "preview": "looks/previews/look-054-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 37,
+          "name": "Красный укороченный верх на молнии",
+          "file": "clothes_photos/photo_2026-11-01 14.59.24.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 5,
+          "name": "Белый топ на широких бретелях",
+          "file": "clothes_photos/photo_2026-11-01 14.58.57.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Белый топ под красный верх, пальто поверх. Проверь, не собираются ли рукава и остаётся ли закрыта талия при движении.",
+      "additions": [
+        {
+          "name": "Длинное тёмно-серое пальто",
+          "type": "clothing"
+        },
+        {
+          "name": "Чёрные ботинки на устойчивой подошве",
+          "type": "accessory"
+        },
+        {
+          "name": "Светло-серый шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Чёрная сумка через плечо",
+          "type": "accessory"
+        }
+      ],
+      "extended": true
+    },
+    {
+      "id": 55,
+      "title": "Вечерний выход со светлым тренчем",
+      "preview": "looks/previews/look-055-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 10,
+          "name": "Светло-розовый топ с высоким воротом",
+          "file": "clothes_photos/photo_2026-11-01 14.59.00.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 29,
+          "name": "Тёмная юбка с атласным блеском",
+          "file": "clothes_photos/photo_2026-11-01 14.59.17.jpeg",
+          "rotation": -90
+        }
+      ],
+      "wear": "Топ заправь в юбку, тренч оставь открытым. На месте его можно снять. Проверь свободу шага и посадку в талии.",
+      "additions": [
+        {
+          "name": "Бежевый тренч",
+          "type": "clothing"
+        },
+        {
+          "name": "Бордовые закрытые туфли",
+          "type": "accessory"
+        },
+        {
+          "name": "Серебристые серьги-кольца",
+          "type": "accessory"
+        },
+        {
+          "name": "Маленькая бордовая сумка",
+          "type": "accessory"
+        }
+      ],
+      "extended": true
+    },
+    {
+      "id": 56,
+      "title": "Светлая основа и шоколадный кардиган",
+      "preview": "looks/previews/look-056-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 65,
+          "name": "Светлый лонгслив с круглым вырезом",
+          "file": "clothes_photos/photo_2026-11-01 14.59.48.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 44,
+          "name": "Бежевые широкие брюки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.30 (1).jpeg",
+          "rotation": 0
+        }
+      ],
+      "wear": "Кардиган поверх лонгслива. Ремень добавляй только при подходящих шлёвках; проверь удобство пояса сидя.",
+      "additions": [
+        {
+          "name": "Тёмно-коричневый кардиган",
+          "type": "clothing"
+        },
+        {
+          "name": "Тонкий тёмно-коричневый ремень",
+          "type": "accessory"
+        },
+        {
+          "name": "Коричневые лоферы",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        },
+        {
+          "name": "Коричневая сумка формы полумесяца",
+          "type": "accessory"
+        }
+      ],
+      "extended": true
+    },
+    {
+      "id": 57,
+      "title": "Зелёное платье с длинным жилетом",
+      "preview": "looks/previews/look-057-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 33,
+          "name": "Тёмно-зелёное платье с длинными рукавами",
+          "file": "clothes_photos/photo_2026-11-01 14.59.21.jpeg",
+          "rotation": -90
+        }
+      ],
+      "wear": "Жилет надень поверх платья. Пояс завязывай без натяжения; проверь свободу в проймах и удобство шага.",
+      "additions": [
+        {
+          "name": "Длинный бежевый жилет с поясом",
+          "type": "clothing"
+        },
+        {
+          "name": "Тёмно-коричневые высокие сапоги",
+          "type": "accessory"
+        },
+        {
+          "name": "Платок с зелёно-бежевым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшая тёмно-коричневая сумка",
+          "type": "accessory"
+        }
+      ],
+      "extended": true
+    },
+    {
+      "id": 58,
+      "title": "Тёмная куртка-рубашка и светлое плиссе",
+      "preview": "looks/previews/look-058-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 1,
+          "name": "Серо-голубая футболка",
+          "file": "clothes_photos/photo_2026-11-01 14.58.54.jpeg",
+          "rotation": -90
+        },
+        {
+          "id": 69,
+          "name": "Тёмная куртка-рубашка с накладными карманами",
+          "file": "clothes_photos/photo_2026-11-01 16.58.37.jpeg",
+          "rotation": 180
+        }
+      ],
+      "wear": "Футболка под куртку-рубашку. Внешний слой можно оставить открытым; проверь, как длина куртки сочетается с поясом юбки.",
+      "additions": [
+        {
+          "name": "Юбка миди плиссе цвета экрю",
+          "type": "clothing"
+        },
+        {
+          "name": "Чёрные высокие сапоги",
+          "type": "accessory"
+        },
+        {
+          "name": "Короткое серебристое колье",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        }
+      ],
+      "extended": true
+    },
+    {
+      "id": 59,
+      "title": "Синий свитер с юбкой миди",
+      "preview": "looks/previews/look-059-styled-v2.jpg",
+      "sources": [
+        {
+          "id": 39,
+          "name": "Свитер с широкими цветными полосами",
+          "file": "clothes_photos/photo_2026-11-01 14.59.26.jpeg",
+          "rotation": -90
+        }
+      ],
+      "wear": "Свитер оставь свободно или слегка заправь спереди, если ткань не собирается на поясе. Проверь свободу шага в юбке.",
+      "additions": [
+        {
+          "name": "Однотонная тёмно-синяя юбка миди",
+          "type": "clothing"
+        },
+        {
+          "name": "Высокие бордовые сапоги",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовый берет",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшие золотистые серьги-кольца",
+          "type": "accessory"
+        },
+        {
+          "name": "Бордовая сумка",
+          "type": "accessory"
+        }
+      ],
+      "extended": true
+    }
+  ]
+}

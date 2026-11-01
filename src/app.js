@@ -53,10 +53,18 @@ function itemPhoto(item) {
   return `<div class="photo"><img src="${escape(item.file)}" alt="${escape(item.name)}" loading="lazy" style="transform:rotate(${Number(item.rotation) || 0}deg)"></div>`;
 }
 
-function lookPhotos(look) {
-  if ([1, 3].includes(look.id))
-    return `<div class="collage collage-${look.id}"><img src="looks/two-looks-preview.png" alt="${escape(look.title)} — готовый коллаж" loading="lazy"></div>`;
-  return `<div class="look-photos">${look.items.map((id) => itemPhoto(catalog.items[id])).join("")}</div>`;
+function lookArtwork(look) {
+  return `<div class="look-artwork"><img src="${escape(look.preview)}" alt="${escape(look.title)} — визуализация образа" loading="lazy"></div>`;
+}
+
+function lookAdditions(look) {
+  if (!look.additions?.length) return "";
+  return `<p class="look-additions"><strong>Дополнить:</strong> ${look.additions.map(item => escape(item.name)).join(" · ")}<span>Вне каталога</span></p>`;
+}
+
+function missingItems(look) {
+  if (!look.additions?.length) return "";
+  return `<section class="look-suggestions" aria-labelledby="suggestions-title"><h3 id="suggestions-title">Чего не хватает</h3><p>Предлагаемые дополнения — их нет в каталоге.</p><ul>${look.additions.map(item => `<li><span>${escape(item.name)}</span><small>${item.type === "clothing" ? "Одежда" : "Аксессуар"}</small></li>`).join("")}</ul></section>`;
 }
 
 function condition(code) {
@@ -115,14 +123,14 @@ function renderLooks() {
       )
       .join("")}</div>
     <button class="base" data-action="base" aria-label="Сменить основу"><span>Основа: ${escape(catalog.items[state.base].name)}</span><span aria-hidden="true">Сменить ›</span></button>
-    <p class="section-caption">Сочетаний: ${looks.length} · из твоих вещей</p>
+    <p class="section-caption">Сочетаний: ${looks.length} · с твоими вещами</p>
     <div class="feed">${
       looks
         .map(
           (
             look,
           ) => `<button class="look-card" data-testid="look-card" data-look="${look.id}" aria-label="${escape(look.title)}">
-      ${lookPhotos(look)}<div class="look-copy"><span class="eyebrow">${state.occasion === "everyday" ? "НА КАЖДЫЙ ДЕНЬ" : "ДЛЯ ОСОБОГО ВЕЧЕРА"}</span><h2>${escape(look.title)}</h2><p>${escape(look.why)}</p><span class="more">Подробнее <span aria-hidden="true">↗</span></span></div>
+      ${lookArtwork(look)}<div class="look-copy"><span class="eyebrow">${state.occasion === "everyday" ? "НА КАЖДЫЙ ДЕНЬ" : "ДЛЯ ОСОБОГО ВЕЧЕРА"}</span>${look.extended ? '<span class="look-badge">Сложный образ · С дополнениями</span>' : ""}<h2>${escape(look.title)}</h2><p>${escape(look.why)}</p>${lookAdditions(look)}<span class="more">Подробнее <span aria-hidden="true">↗</span></span></div>
     </button>`,
         )
         .join("") ||
@@ -197,7 +205,7 @@ function showLook(id) {
   const look = catalog.looks.find((look) => look.id === Number(id));
   showDialog(
     look.title,
-    `${lookPhotos(look)}<ul class="item-names">${look.items.map((id) => `<li>${escape(catalog.items[id].name)}</li>`).join("")}</ul><h3>Почему вместе</h3><p>${escape(look.why)}</p><h3>Как носить</h3><p>${escape(look.wear)}</p><h3>По погоде</h3><p>${escape(look.weather)}</p><p class="advice">${weatherAdvice(state.weather)}</p>`,
+    `${lookArtwork(look)}<p class="artwork-caption">Визуализация образа</p><section class="look-originals" aria-labelledby="originals-title"><h3 id="originals-title">Исходные фотографии</h3><p class="section-caption">Вещи из твоего каталога.</p><div class="originals-grid">${look.items.map((id) => `<figure>${itemPhoto(catalog.items[id])}<figcaption>${escape(catalog.items[id].name)}</figcaption></figure>`).join("")}</div></section>${missingItems(look)}<h3>Почему вместе</h3><p>${escape(look.why)}</p><h3>Как носить</h3><p>${escape(look.wear)}</p><h3>По погоде</h3><p>${escape(look.weather)}</p><p class="advice">${weatherAdvice(state.weather)}</p>`,
   );
 }
 
