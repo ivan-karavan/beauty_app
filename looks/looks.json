@@ -334,6 +334,21 @@
       "name": "Лонгслив в розово-белую полоску",
       "file": "clothes_photos/photo_2026-11-01 14.59.50.jpeg",
       "rotation": -90
+    },
+    "68": {
+      "name": "Светлая фактурная кофта на молнии",
+      "file": "clothes_photos/photo_2026-11-01 16.58.36.jpeg",
+      "rotation": 180
+    },
+    "69": {
+      "name": "Тёмная куртка-рубашка с накладными карманами",
+      "file": "clothes_photos/photo_2026-11-01 16.58.37.jpeg",
+      "rotation": 180
+    },
+    "70": {
+      "name": "Светлый стёганый жилет",
+      "file": "clothes_photos/photo_2026-11-01 16.58.39.jpeg",
+      "rotation": -90
     }
   },
   "looks": [

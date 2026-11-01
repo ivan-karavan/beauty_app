@@ -48,7 +48,7 @@ test("wardrobe filters and item action change the required base", async ({
   page,
 }) => {
   await page.getByRole("button", { name: "Гардероб", exact: true }).click();
-  await expect(page.getByTestId("item-card")).toHaveCount(67);
+  await expect(page.getByTestId("item-card")).toHaveCount(70);
   await page.getByRole("button", { name: "В подборе", exact: true }).click();
   await expect(page.getByTestId("item-card")).toHaveCount(25);
   await page
@@ -150,7 +150,7 @@ test("all visible assets load and page fits a narrow screen", async ({
     ),
   ).toBe(true);
   await page.getByRole("button", { name: "Гардероб", exact: true }).click();
-  await expect(page.getByTestId("item-card")).toHaveCount(67);
+  await expect(page.getByTestId("item-card")).toHaveCount(70);
   for (const image of await page.locator("main img").all()) {
     await image.scrollIntoViewIfNeeded();
     await expect
