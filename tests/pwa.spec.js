@@ -132,9 +132,15 @@ test("worker update preserves local data and other applications caches", async (
       { scope: registration.scope },
     );
   });
+  const reloaded = page.waitForEvent(
+    "framenavigated",
+    (frame) => frame === page.mainFrame(),
+  );
   await page
     .getByRole("button", { name: "Обновить приложение", exact: true })
     .click();
+  await reloaded;
+  await page.waitForLoadState("load");
   await expect(page.locator("#season-picker")).toHaveAccessibleName(
     "Сезон: Лето",
   );

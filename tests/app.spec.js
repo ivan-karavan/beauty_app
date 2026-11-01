@@ -1,4 +1,5 @@
 import { test, expect } from "@playwright/test";
+import { readFileSync } from "node:fs";
 import { chooseSeason, seedLegacyPhoto, seasons } from "./helpers.js";
 
 test.beforeEach(async ({ page }) => {
@@ -238,77 +239,82 @@ test("cards show full-width artwork, owned originals and explicit suggestions", 
   ).toContainText("Предлагаемые дополнения — их нет в каталоге.");
 });
 
-for (const season of seasons)
-  test(`every prepared look loads artwork and preserves garment details: ${season}`, async ({
-    page,
-  }) => {
-    const catalog = await page.request
-      .get("looks/looks.json")
-      .then((response) => response.json());
-    await chooseSeason(page, season);
-    // Test each multi-season look once without concentrating all of them in spring.
-    const batch = catalog.looks.filter(
-      (look) => look.seasons[(look.id - 1) % look.seasons.length] === season,
-    );
-    expect(batch.length).toBeGreaterThan(0);
-    for (const look of batch) {
-      await page
-        .locator(
-          `[data-occasion="${look.scenarios.some((value) => value.startsWith("Театр")) ? "evening" : "everyday"}"]`,
-        )
-        .click();
-      await page.getByRole("button", { name: "Сменить основу" }).click();
-      await page.locator(`[data-base="${look.items[0]}"]`).click();
-      const card = page.locator(`[data-look="${look.id}"]`);
-      await expect(card.locator("img")).toHaveCount(1);
-      await expect(card.locator("img")).toHaveAttribute("src", look.preview);
-      await expect(card).toContainText("Дополнить:");
-      await expect(card).toContainText("Вне каталога");
-      for (const addition of look.additions)
-        await expect(card).toContainText(addition.name);
-      if (look.extended)
-        await expect(card).toContainText("Сложный образ · С дополнениями");
-      await card.click();
-      const dialog = page.getByRole("dialog");
-      const artwork = dialog.locator(".look-artwork img");
-      await expect(artwork).toHaveAttribute("src", look.preview);
-      await artwork.scrollIntoViewIfNeeded();
-      await expect
-        .poll(
-          () => artwork.evaluate((img) => img.complete && img.naturalWidth > 0),
-          {
-            message: `Look ${look.id} (${look.title}): ${look.preview} must load`,
-          },
-        )
-        .toBe(true);
-      const additions = dialog.getByRole("region", { name: "Чего не хватает" });
-      await expect(additions.locator("li")).toHaveCount(look.additions.length);
-      for (const addition of look.additions)
-        await expect(additions).toContainText(addition.name);
-      const originals = dialog.locator(".look-originals figure");
-      await expect(originals).toHaveCount(look.items.length);
-      for (const [index, id] of look.items.entries()) {
-        const item = catalog.items[id];
-        await expect(originals.nth(index).locator("img")).toHaveAttribute(
-          "src",
-          item.file,
-        );
-        await expect(originals.nth(index).locator("img")).toHaveAttribute(
-          "alt",
-          item.name,
-        );
-        await expect(originals.nth(index).locator("img")).toHaveAttribute(
-          "style",
-          `transform:rotate(${item.rotation || 0}deg)`,
-        );
-        await expect(originals.nth(index).locator("figcaption")).toHaveText(
-          item.name,
-        );
+const preparedCatalog = JSON.parse(
+  readFileSync(new URL("../looks/looks.json", import.meta.url), "utf8"),
+);
+for (const season of seasons) {
+  const seasonalLooks = preparedCatalog.looks.filter(
+    (look) => look.seasons[(look.id - 1) % look.seasons.length] === season,
+  );
+  for (let offset = 0; offset < seasonalLooks.length; offset += 10) {
+    const batch = seasonalLooks.slice(offset, offset + 10);
+    test(`every prepared look loads artwork and preserves garment details: ${season} ${offset + 1}-${offset + batch.length}`, async ({
+      page,
+    }) => {
+      const catalog = await page.request
+        .get("looks/looks.json")
+        .then((response) => response.json());
+      await chooseSeason(page, season);
+      for (const look of batch) {
+        await page
+          .locator(
+            `[data-occasion="${look.scenarios.some((value) => value.startsWith("Театр")) ? "evening" : "everyday"}"]`,
+          )
+          .click();
+        await page.getByRole("button", { name: "Сменить основу" }).click();
+        await page.locator(`[data-base="${look.items[0]}"]`).click();
+        const card = page.locator(`[data-look="${look.id}"]`);
+        await expect(card.locator("img")).toHaveCount(1);
+        await expect(card.locator("img")).toHaveAttribute("src", look.preview);
+        await expect(card).toContainText("Дополнить:");
+        await expect(card).toContainText("Вне каталога");
+        for (const addition of look.additions)
+          await expect(card).toContainText(addition.name);
+        if (look.extended)
+          await expect(card).toContainText("Сложный образ · С дополнениями");
+        await card.click();
+        const dialog = page.getByRole("dialog");
+        const artwork = dialog.locator(".look-artwork img");
+        await expect(artwork).toHaveAttribute("src", look.preview);
+        await artwork.scrollIntoViewIfNeeded();
+        await expect
+          .poll(
+            () => artwork.evaluate((img) => img.complete && img.naturalWidth > 0),
+            {
+              message: `Look ${look.id} (${look.title}): ${look.preview} must load`,
+            },
+          )
+          .toBe(true);
+        const additions = dialog.getByRole("region", { name: "Чего не хватает" });
+        await expect(additions.locator("li")).toHaveCount(look.additions.length);
+        for (const addition of look.additions)
+          await expect(additions).toContainText(addition.name);
+        const originals = dialog.locator(".look-originals figure");
+        await expect(originals).toHaveCount(look.items.length);
+        for (const [index, id] of look.items.entries()) {
+          const item = catalog.items[id];
+          await expect(originals.nth(index).locator("img")).toHaveAttribute(
+            "src",
+            item.file,
+          );
+          await expect(originals.nth(index).locator("img")).toHaveAttribute(
+            "alt",
+            item.name,
+          );
+          await expect(originals.nth(index).locator("img")).toHaveAttribute(
+            "style",
+            `transform:rotate(${item.rotation || 0}deg)`,
+          );
+          await expect(originals.nth(index).locator("figcaption")).toHaveText(
+            item.name,
+          );
+        }
+        await expect(dialog).toContainText(look.seasonNote);
+        await page.getByRole("button", { name: "Закрыть" }).click();
       }
-      await expect(dialog).toContainText(look.seasonNote);
-      await page.getByRole("button", { name: "Закрыть" }).click();
-    }
-  });
+    });
+  }
+}
 
 test("all visible assets load, compact navigation fits a narrow screen", async ({
   page,
