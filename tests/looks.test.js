@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync, existsSync } from "node:fs";
+import { readFileSync, existsSync, readdirSync } from "node:fs";
 import { selectLooks, weatherAdvice } from "../src/looks.js";
 
 const catalog = JSON.parse(
@@ -63,4 +63,14 @@ test("catalog references real photos and every look uses current catalog", () =>
   for (const look of catalog.looks)
     for (const id of look.items)
       assert.ok(catalog.items[id], `${look.id}: ${id}`);
+});
+
+test("catalog includes every originally submitted photo", () => {
+  const submitted = readdirSync(new URL("../clothes_photos/", import.meta.url))
+    .filter((file) => file.endsWith(".jpeg"))
+    .sort();
+  const included = Object.values(catalog.items)
+    .map((item) => item.file.replace("clothes_photos/", ""))
+    .sort();
+  assert.deepEqual(included, submitted);
 });

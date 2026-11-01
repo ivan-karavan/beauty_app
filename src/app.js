@@ -108,16 +108,21 @@ function renderLooks() {
     <p class="advice" data-testid="weather-advice">${weatherAdvice(state.weather)}</p>`;
 }
 
+function hasLooks(id) {
+  return catalog.looks.some((look) => look.items.includes(Number(id)));
+}
+
 function renderWardrobe() {
   const current = Object.entries(catalog.items).map(([id, item]) => ({
     id,
     ...item,
+    inLooks: hasLooks(id),
   }));
   const items =
     state.filter === "new"
       ? state.photos
       : state.filter === "curated"
-        ? current
+        ? current.filter((item) => item.inLooks)
         : [...current, ...state.photos];
   return `<p class="intro">Твои вещи и сохранённые фото</p>
     <div class="segments filters">${[
@@ -130,7 +135,7 @@ function renderWardrobe() {
           `<button data-filter="${value}" aria-pressed="${state.filter === value}">${label}</button>`,
       )
       .join("")}</div>
-    <div class="wardrobe-grid">${items.map((item) => `<button class="item-card" data-testid="item-card" data-item="${escape(item.id)}" aria-label="${escape(item.name)}">${itemPhoto(item)}<h2>${escape(item.name)}</h2><p>${item.isNew ? "Пока без подбора" : 'В подборе <span aria-hidden="true">›</span>'}</p></button>`).join("")}</div>
+    <div class="wardrobe-grid">${items.map((item) => `<button class="item-card" data-testid="item-card" data-item="${escape(item.id)}" aria-label="${escape(item.name)}">${itemPhoto(item)}<h2>${escape(item.name)}</h2><p>${item.inLooks ? 'В подборе <span aria-hidden="true">›</span>' : "Пока без подбора"}</p></button>`).join("")}</div>
     ${items.length ? '<p class="section-caption">Нажми на вещь, чтобы рассмотреть её или выбрать основой образов.</p>' : '<div class="empty"><h2>Новых фото пока нет</h2><p>Добавь фото с телефона — оно останется здесь.</p></div>'}`;
 }
 
@@ -160,7 +165,7 @@ function showItem(id) {
     catalog.items[id] || state.photos.find((photo) => photo.id === id);
   showDialog(
     item.name,
-    `${itemPhoto(item)}<p class="badge">${item.isNew ? "Пока без подбора" : "В подборе"}</p><p>${item.isNew ? "Фото сохранено на устройстве. Распознавание и подбор появятся позже." : "Для этой вещи есть готовые сочетания. Откроем их под выбранные погоду и повод."}</p>${item.isNew ? "" : '<button class="primary" id="use-item">Образы с этой вещью →</button>'}`,
+    `${itemPhoto(item)}<p class="badge">${hasLooks(id) ? "В подборе" : "Пока без подбора"}</p><p>${item.isNew ? "Фото сохранено на устройстве. Распознавание и подбор появятся позже." : hasLooks(id) ? "Для этой вещи есть готовые сочетания. Откроем их под выбранные погоду и повод." : "Для этой вещи пока нет готовых сочетаний. Вещь доступна в каталоге и при выборе основы."}</p>${item.isNew ? "" : '<button class="primary" id="use-item">Образы с этой вещью →</button>'}`,
   );
   if (!item.isNew) $("#use-item").onclick = () => chooseBase(id);
 }
@@ -195,8 +200,13 @@ function showBasePicker() {
 function showWeatherForm() {
   showDialog(
     "Выбрать погоду",
-    `<form id="weather-form"><label>Температура, °C<input name="temperature" type="number" min="-60" max="60" step="any" required value="${state.weather?.temperature ?? 12}"></label><label>Осадки<select name="precipitation"><option value="dry">Без осадков</option><option value="rain">Дождь</option><option value="snow">Снег</option></select></label><label>Ветер, м/с<input name="wind" type="number" min="0" max="100" step="any" required value="${state.weather?.wind ?? 0}"></label><button class="primary" type="submit">Применить</button></form>`,
+    `<form id="weather-form"><label for="temperature">Температура, °C</label><div class="temperature-control"><input id="temperature" name="temperature" type="number" inputmode="decimal" min="-60" max="60" step="any" required value="${state.weather?.temperature ?? 12}"><button class="soft" id="temperature-sign" type="button" aria-label="Сменить знак температуры">+ / −</button></div><label>Осадки<select name="precipitation"><option value="dry">Без осадков</option><option value="rain">Дождь</option><option value="snow">Снег</option></select></label><label>Ветер, м/с<input name="wind" type="number" min="0" max="100" step="any" required value="${state.weather?.wind ?? 0}"></label><button class="primary" type="submit">Применить</button></form>`,
   );
+  $("#temperature-sign").onclick = () => {
+    const input = $("#temperature");
+    input.value = String(-Number(input.value || 0));
+    input.focus();
+  };
   const currentCondition = state.weather && condition(state.weather.code);
   $("#weather-form select").value =
     currentCondition === "Снег"

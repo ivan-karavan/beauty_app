@@ -48,7 +48,7 @@ test("wardrobe filters and item action change the required base", async ({
   page,
 }) => {
   await page.getByRole("button", { name: "Гардероб", exact: true }).click();
-  await expect(page.getByTestId("item-card")).toHaveCount(25);
+  await expect(page.getByTestId("item-card")).toHaveCount(67);
   await page.getByRole("button", { name: "В подборе", exact: true }).click();
   await expect(page.getByTestId("item-card")).toHaveCount(25);
   await page
@@ -113,13 +113,11 @@ test("weather failure offers manual input and updates weather advice", async ({
 test("broken image and unavailable storage show errors without reporting saved", async ({
   page,
 }) => {
-  await page
-    .getByLabel("Фото с устройства")
-    .setInputFiles({
-      name: "broken.jpg",
-      mimeType: "image/jpeg",
-      buffer: Buffer.from("broken"),
-    });
+  await page.getByLabel("Фото с устройства").setInputFiles({
+    name: "broken.jpg",
+    mimeType: "image/jpeg",
+    buffer: Buffer.from("broken"),
+  });
   await expect(page.getByRole("alert")).toContainText(
     "Не удалось открыть фото",
   );
@@ -152,21 +150,16 @@ test("all visible assets load and page fits a narrow screen", async ({
     ),
   ).toBe(true);
   await page.getByRole("button", { name: "Гардероб", exact: true }).click();
-  await expect(page.getByTestId("item-card")).toHaveCount(25);
-  const images = await page.locator("main img").evaluateAll((images) =>
-    Promise.all(
-      images.map(async (img) => {
-        img.loading = "eager";
-        try {
-          await img.decode();
-          return img.naturalWidth > 0;
-        } catch {
-          return false;
-        }
-      }),
-    ),
-  );
-  expect(images.every(Boolean)).toBe(true);
+  await expect(page.getByTestId("item-card")).toHaveCount(67);
+  for (const image of await page.locator("main img").all()) {
+    await image.scrollIntoViewIfNeeded();
+    await expect
+      .poll(
+        () => image.evaluate((img) => img.complete && img.naturalWidth > 0),
+        { message: await image.getAttribute("src") },
+      )
+      .toBe(true);
+  }
 });
 
 test("manual weather accepts decimal forecast defaults", async ({ page }) => {
@@ -243,4 +236,35 @@ test("finishing an old save preserves a newly opened dialog", async ({
   await page.getByRole("button", { name: "Гардероб", exact: true }).click();
   await page.getByRole("button", { name: "Новые фото", exact: true }).click();
   await expect(page.getByTestId("item-card")).toHaveCount(1);
+});
+
+test("original photos outside prepared looks are visible and selectable without claiming ready looks", async ({
+  page,
+}) => {
+  await page.getByRole("button", { name: "Гардероб", exact: true }).click();
+  await page.locator('[data-item="1"]').click();
+  await expect(page.getByRole("dialog")).toContainText(
+    "Для этой вещи пока нет готовых сочетаний",
+  );
+  await page.getByRole("button", { name: "Образы с этой вещью" }).click();
+  await expect(page.getByText("Подходящих сочетаний пока нет")).toBeVisible();
+  await page.getByRole("button", { name: "Гардероб", exact: true }).click();
+  await page.getByRole("button", { name: "Новые фото", exact: true }).click();
+  await expect(page.getByTestId("item-card")).toHaveCount(0);
+});
+
+test("negative temperature can be entered without a minus key", async ({
+  page,
+}) => {
+  await page.getByRole("button", { name: "Изменить погоду" }).click();
+  await page.getByLabel("Температура, °C").fill("5");
+  await page.getByRole("button", { name: "Сменить знак температуры" }).click();
+  await expect(page.getByLabel("Температура, °C")).toHaveValue("-5");
+  await page.getByRole("button", { name: "Применить" }).click();
+  await expect(page.getByText("−5° · Ясно", { exact: true })).toBeVisible();
+  await page.getByRole("button", { name: "Изменить погоду" }).click();
+  await page.getByRole("button", { name: "Сменить знак температуры" }).click();
+  await expect(page.getByLabel("Температура, °C")).toHaveValue("5");
+  await page.getByRole("button", { name: "Применить" }).click();
+  await expect(page.getByText("+5° · Ясно", { exact: true })).toBeVisible();
 });

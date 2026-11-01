@@ -545,3 +545,16 @@ select {
     min-height: 240px;
   }
 }
+
+.temperature-control {
+  display: flex;
+  gap: 8px;
+}
+.temperature-control input {
+  min-width: 0;
+}
+.temperature-control button {
+  min-width: 72px;
+  text-align: center;
+  font-size: 18px;
+}
