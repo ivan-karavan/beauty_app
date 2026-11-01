@@ -1,0 +1,32 @@
+{
+  "id": "/beauty_app/",
+  "name": "Личный гардероб",
+  "short_name": "Гардероб",
+  "description": "Образы из твоих вещей и личный гардероб на устройстве",
+  "lang": "ru",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "theme_color": "#68485f",
+  "background_color": "#fffdfc",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

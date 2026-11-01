@@ -587,3 +587,23 @@ select {
   text-align: center;
   font-size: 18px;
 }
+
+.pwa-install {
+  display: block;
+  margin: 0 auto 20px;
+  white-space: normal;
+  text-align: center;
+}
+.pwa-update {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 15px;
+  margin-bottom: 16px;
+  border-radius: 16px;
+  background: var(--soft);
+  color: var(--plum);
+  font-size: 14px;
+}

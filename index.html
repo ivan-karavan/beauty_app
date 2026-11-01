@@ -7,16 +7,27 @@
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
     <meta name="theme-color" content="#68485f" />
+    <meta name="app-build" content="development" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Гардероб" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta
       name="description"
       content="Образы из твоих вещей. Личный гардероб с хранением фото на устройстве."
     />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob:; connect-src 'self' https://api.open-meteo.com; object-src 'none'; base-uri 'none'; form-action 'none'"
+      content="default-src 'self'; script-src 'self'; worker-src 'self'; manifest-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob:; connect-src 'self' https://api.open-meteo.com; object-src 'none'; base-uri 'none'; form-action 'none'"
     />
     <title>Личный гардероб</title>
-    <link rel="icon" href="data:," />
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+    <link
+      rel="apple-touch-icon"
+      href="icons/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="src/style.css" />
     <script type="module" src="src/app.js"></script>
   </head>
@@ -29,16 +40,24 @@
         </div>
         <button id="add-photo" class="soft">+ Добавить фото</button>
       </header>
+      <aside id="pwa-update" class="pwa-update" role="status" hidden>
+        <p>Доступна новая версия.</p>
+        <button id="pwa-reload" class="soft">Обновить приложение</button>
+      </aside>
       <p id="message" role="alert" hidden></p>
       <main id="content" aria-busy="true"><p>Открываем твой гардероб…</p></main>
       <footer class="privacy">
+        <button id="install-app" class="soft pwa-install">
+          Добавить на главный экран
+        </button>
         <p>Добавленные фото — только на этом устройстве.</p>
         <details>
           <summary>О хранении и погоде</summary>
           <p>
-            Новые фото хранятся в этом браузере. Исходный каталог и коллажи опубликованы на сайте. Синхронизации и резервного
-            копирования нет: очистка данных браузера может удалить добавленные
-            фото. Распознавание новых фото появится позже.
+            Новые фото хранятся в этом браузере. Исходный каталог и коллажи
+            опубликованы на сайте. Синхронизации и резервного копирования нет:
+            очистка данных браузера может удалить добавленные фото.
+            Распознавание новых фото появится позже.
           </p>
           <p>
             Наружу уходят только координаты для погоды. Прогноз:

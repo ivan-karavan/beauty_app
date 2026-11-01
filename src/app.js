@@ -1,3 +1,4 @@
+import { setupPwa } from "./pwa.js";
 import { selectLooks, weatherAdvice } from "./looks.js";
 import { loadWeather } from "./weather.js";
 import { listPhotos, savePhoto } from "./photos.js";
@@ -59,12 +60,12 @@ function lookArtwork(look) {
 
 function lookAdditions(look) {
   if (!look.additions?.length) return "";
-  return `<p class="look-additions"><strong>Дополнить:</strong> ${look.additions.map(item => escape(item.name)).join(" · ")}<span>Вне каталога</span></p>`;
+  return `<p class="look-additions"><strong>Дополнить:</strong> ${look.additions.map((item) => escape(item.name)).join(" · ")}<span>Вне каталога</span></p>`;
 }
 
 function missingItems(look) {
   if (!look.additions?.length) return "";
-  return `<section class="look-suggestions" aria-labelledby="suggestions-title"><h3 id="suggestions-title">Чего не хватает</h3><p>Предлагаемые дополнения — их нет в каталоге.</p><ul>${look.additions.map(item => `<li><span>${escape(item.name)}</span><small>${item.type === "clothing" ? "Одежда" : "Аксессуар"}</small></li>`).join("")}</ul></section>`;
+  return `<section class="look-suggestions" aria-labelledby="suggestions-title"><h3 id="suggestions-title">Чего не хватает</h3><p>Предлагаемые дополнения — их нет в каталоге.</p><ul>${look.additions.map((item) => `<li><span>${escape(item.name)}</span><small>${item.type === "clothing" ? "Одежда" : "Аксессуар"}</small></li>`).join("")}</ul></section>`;
 }
 
 function condition(code) {
@@ -446,6 +447,7 @@ async function start() {
     );
   }
 }
+setupPwa(showDialog, notify);
 start();
 if (!restoreManualWeather())
   updateWeather({ latitude: 55.75, longitude: 37.62 }, "Москва");
