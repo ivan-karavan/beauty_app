@@ -50,7 +50,7 @@ test("wardrobe filters and item action change the required base", async ({
   await page.getByRole("button", { name: "Гардероб", exact: true }).click();
   await expect(page.getByTestId("item-card")).toHaveCount(70);
   await page.getByRole("button", { name: "В подборе", exact: true }).click();
-  await expect(page.getByTestId("item-card")).toHaveCount(25);
+  await expect(page.getByTestId("item-card")).toHaveCount(70);
   await page
     .getByRole("button", { name: "Голубая рубашка", exact: true })
     .click();
@@ -238,16 +238,16 @@ test("finishing an old save preserves a newly opened dialog", async ({
   await expect(page.getByTestId("item-card")).toHaveCount(1);
 });
 
-test("original photos outside prepared looks are visible and selectable without claiming ready looks", async ({
+test("newly catalogued clothes participate in prepared looks", async ({
   page,
 }) => {
   await page.getByRole("button", { name: "Гардероб", exact: true }).click();
   await page.locator('[data-item="1"]').click();
   await expect(page.getByRole("dialog")).toContainText(
-    "Для этой вещи пока нет готовых сочетаний",
+    "Для этой вещи есть готовые сочетания",
   );
   await page.getByRole("button", { name: "Образы с этой вещью" }).click();
-  await expect(page.getByText("Подходящих сочетаний пока нет")).toBeVisible();
+  await expect(page.getByTestId("look-card")).toHaveCount(1);
   await page.getByRole("button", { name: "Гардероб", exact: true }).click();
   await page.getByRole("button", { name: "Новые фото", exact: true }).click();
   await expect(page.getByTestId("item-card")).toHaveCount(0);
@@ -267,4 +267,57 @@ test("negative temperature can be entered without a minus key", async ({
   await expect(page.getByLabel("Температура, °C")).toHaveValue("5");
   await page.getByRole("button", { name: "Применить" }).click();
   await expect(page.getByText("+5° · Ясно", { exact: true })).toBeVisible();
+});
+
+test("manual weather survives reload with temperature precipitation and wind", async ({
+  page,
+}) => {
+  await page.getByRole("button", { name: "Изменить погоду" }).click();
+  await page.getByLabel("Температура, °C").fill("-5");
+  await page.getByLabel("Осадки").selectOption("snow");
+  await page.getByLabel("Ветер, м/с").fill("12");
+  await page.getByRole("button", { name: "Применить" }).click();
+  await page.reload();
+  await expect(page.getByText("−5° · Снег", { exact: true })).toBeVisible();
+  await expect(page.getByText("Вручную · твой выбор")).toBeVisible();
+  await expect(page.getByTestId("weather-advice")).toContainText(
+    "Сильный ветер",
+  );
+  await page.getByRole("button", { name: "Изменить погоду" }).click();
+  await expect(page.getByLabel("Температура, °C")).toHaveValue("-5");
+  await expect(page.getByLabel("Осадки")).toHaveValue("snow");
+  await expect(page.getByLabel("Ветер, м/с")).toHaveValue("12");
+});
+
+test("returning to automatic forecast clears the saved manual choice", async ({
+  page,
+}) => {
+  await page.getByRole("button", { name: "Изменить погоду" }).click();
+  await page.getByLabel("Температура, °C").fill("-5");
+  await page.getByRole("button", { name: "Применить" }).click();
+  await page.getByRole("button", { name: "Вернуть автопогоду" }).click();
+  await expect(page.getByText("+12° · Облачно", { exact: true })).toBeVisible();
+  await page.reload();
+  await expect(page.getByText("+12° · Облачно", { exact: true })).toBeVisible();
+  await expect(page.getByText("Вручную · твой выбор")).toHaveCount(0);
+});
+
+test("blocked weather storage reports that the choice cannot survive reload", async ({
+  page,
+}) => {
+  await page.addInitScript(() => {
+    Object.defineProperty(window, "localStorage", {
+      get() {
+        throw new DOMException("blocked", "SecurityError");
+      },
+    });
+  });
+  await page.reload();
+  await page.getByRole("button", { name: "Изменить погоду" }).click();
+  await page.getByLabel("Температура, °C").fill("-5");
+  await page.getByRole("button", { name: "Применить" }).click();
+  await expect(page.getByText("−5° · Ясно", { exact: true })).toBeVisible();
+  await expect(page.getByRole("alert")).toContainText(
+    "Не удалось сохранить погоду",
+  );
 });

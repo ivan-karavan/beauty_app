@@ -74,3 +74,13 @@ test("catalog includes every originally submitted photo", () => {
     .sort();
   assert.deepEqual(included, submitted);
 });
+
+test("every catalog item participates in at least one prepared look", () => {
+  const included = new Set(
+    catalog.looks.flatMap((look) => look.items).map(String),
+  );
+  assert.deepEqual(
+    Object.keys(catalog.items).filter((id) => !included.has(id)),
+    [],
+  );
+});

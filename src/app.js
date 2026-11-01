@@ -11,6 +11,7 @@ const escape = (value) =>
         c
       ],
   );
+const WEATHER_KEY = "beauty-app.manual-weather";
 const state = {
   tab: "looks",
   base: "49",
@@ -70,12 +71,34 @@ function condition(code) {
 const degrees = (temperature) =>
   `${temperature < 0 ? "−" : temperature > 0 ? "+" : ""}${Math.abs(Math.round(temperature))}°`;
 
+function restoreManualWeather() {
+  try {
+    const weather = JSON.parse(localStorage.getItem(WEATHER_KEY));
+    if (
+      !weather ||
+      !["temperature", "feelsLike", "precipitation", "code", "wind"].every(
+        (key) => Number.isFinite(weather[key]),
+      ) ||
+      weather.temperature < -60 ||
+      weather.temperature > 60 ||
+      weather.wind < 0 ||
+      weather.wind > 100
+    )
+      return false;
+    state.weather = weather;
+    state.location = "Вручную";
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 function weatherPanel() {
   const weather = state.weather;
   return `<section class="weather" aria-label="Погода">
     <strong>${weather ? `${degrees(weather.temperature)} · ${condition(weather.code)}` : escape(state.weatherStatus)}</strong>
     <p>${escape(state.location)}${weather ? ` · ${state.location === "Вручную" ? "твой выбор" : "сейчас, ощущается " + degrees(weather.feelsLike)}` : ""}</p>
-    <div class="weather-actions"><button data-action="weather">${weather ? "Изменить погоду" : "Выбрать погоду"}</button><button data-action="location">По геопозиции</button></div>
+    <div class="weather-actions"><button data-action="weather">${weather ? "Изменить погоду" : "Выбрать погоду"}</button><button data-action="location">По геопозиции</button>${state.location === "Вручную" ? '<button data-action="automatic-weather">Вернуть автопогоду</button>' : ""}</div>
   </section>`;
 }
 
@@ -227,12 +250,27 @@ function showWeatherForm() {
       wind: Number(data.get("wind")),
     };
     state.location = "Вручную";
+    try {
+      localStorage.setItem(WEATHER_KEY, JSON.stringify(state.weather));
+    } catch {
+      notify(
+        "Не удалось сохранить погоду на устройстве. Выбор действует до перезагрузки страницы.",
+      );
+    }
     closeDialog();
     render();
   };
 }
 
 async function updateWeather(location, label) {
+  try {
+    localStorage.removeItem(WEATHER_KEY);
+  } catch {
+    if (state.location === "Вручную")
+      notify(
+        "Не удалось сохранить выбор автопогоды. После перезагрузки может вернуться ручная погода.",
+      );
+  }
   const request = ++weatherRequest;
   state.weatherStatus = "Загружаем погоду…";
   state.weather = null;
@@ -287,6 +325,8 @@ $("#content").addEventListener("click", (event) => {
   if (action === "base") showBasePicker();
   if (action === "weather") showWeatherForm();
   if (action === "location") locate();
+  if (action === "automatic-weather")
+    updateWeather({ latitude: 55.75, longitude: 37.62 }, "Москва");
 });
 document.querySelectorAll("[data-tab]").forEach(
   (button) =>
@@ -399,4 +439,5 @@ async function start() {
   }
 }
 start();
-updateWeather({ latitude: 55.75, longitude: 37.62 }, "Москва");
+if (!restoreManualWeather())
+  updateWeather({ latitude: 55.75, longitude: 37.62 }, "Москва");
