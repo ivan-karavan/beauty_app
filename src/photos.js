@@ -14,14 +14,14 @@ function openDatabase() {
   });
 }
 
-async function transaction(mode, operation) {
+async function transaction(operation) {
   const db = await openDatabase();
   try {
     return await new Promise((resolve, reject) => {
-      const tx = db.transaction("photos", mode);
+      const tx = db.transaction("photos", "readonly");
       const request = operation(tx.objectStore("photos"));
       tx.oncomplete = () => resolve(request.result);
-      tx.onabort = () => reject(tx.error || new Error("Запись отменена"));
+      tx.onabort = () => reject(tx.error || new Error("Чтение отменено"));
       tx.onerror = () => reject(tx.error);
     });
   } finally {
@@ -29,13 +29,4 @@ async function transaction(mode, operation) {
   }
 }
 
-export const listPhotos = () =>
-  transaction("readonly", (store) => store.getAll());
-export const savePhoto = (file) =>
-  transaction("readwrite", (store) =>
-    store.put({
-      id: crypto.randomUUID(),
-      file,
-      createdAt: Date.now(),
-    }),
-  );
+export const listPhotos = () => transaction((store) => store.getAll());

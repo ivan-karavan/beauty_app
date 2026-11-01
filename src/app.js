@@ -1,7 +1,6 @@
 import { setupPwa } from "./pwa.js";
-import { selectLooks, weatherAdvice } from "./looks.js";
-import { loadWeather } from "./weather.js";
-import { listPhotos, savePhoto } from "./photos.js";
+import { SEASONS, currentSeason, selectLooks } from "./looks.js";
+import { listPhotos } from "./photos.js";
 
 const $ = (selector) => document.querySelector(selector);
 const escape = (value) =>
@@ -12,20 +11,23 @@ const escape = (value) =>
         c
       ],
   );
-const WEATHER_KEY = "beauty-app.manual-weather";
+const SEASON_KEY = "beauty-app.season";
+function restoreSeason() {
+  try {
+    const saved = localStorage.getItem(SEASON_KEY);
+    if (SEASONS.some((season) => season.id === saved)) return saved;
+  } catch {}
+  return currentSeason();
+}
 const state = {
   tab: "looks",
   base: "49",
   occasion: "everyday",
-  filter: "all",
+  category: "all",
   photos: [],
-  weather: null,
-  weatherStatus: "Загружаем погоду…",
-  location: "Москва",
+  season: restoreSeason(),
 };
 let catalog;
-let weatherRequest = 0;
-let disposeDialog = () => {};
 const dialog = $("dialog");
 
 function notify(message = "") {
@@ -37,16 +39,13 @@ function closeDialog() {
   dialog.close();
 }
 dialog.addEventListener("close", () => {
-  disposeDialog();
-  disposeDialog = () => {};
   $("#dialog-content").replaceChildren();
 });
 dialog.querySelector(".close").addEventListener("click", closeDialog);
 
-function showDialog(title, body, dispose = () => {}) {
+function showDialog(title, body) {
   $("#dialog-content").innerHTML =
     `<h2 id="dialog-title">${escape(title)}</h2>${body}`;
-  disposeDialog = dispose;
   dialog.showModal();
 }
 
@@ -68,61 +67,39 @@ function missingItems(look) {
   return `<section class="look-suggestions" aria-labelledby="suggestions-title"><h3 id="suggestions-title">Чего не хватает</h3><p>Предлагаемые дополнения — их нет в каталоге.</p><ul>${look.additions.map((item) => `<li><span>${escape(item.name)}</span><small>${item.type === "clothing" ? "Одежда" : "Аксессуар"}</small></li>`).join("")}</ul></section>`;
 }
 
-function condition(code) {
-  if (code === 0) return "Ясно";
-  if (code <= 3) return "Облачно";
-  if ([45, 48].includes(code)) return "Туман";
-  if ([71, 73, 75, 77, 85, 86].includes(code)) return "Снег";
-  if (code >= 95) return "Гроза";
-  return "Дождь";
-}
-
-const degrees = (temperature) =>
-  `${temperature < 0 ? "−" : temperature > 0 ? "+" : ""}${Math.abs(Math.round(temperature))}°`;
-
-function restoreManualWeather() {
-  try {
-    const weather = JSON.parse(localStorage.getItem(WEATHER_KEY));
-    if (
-      !weather ||
-      !["temperature", "feelsLike", "precipitation", "code", "wind"].every(
-        (key) => Number.isFinite(weather[key]),
-      ) ||
-      weather.temperature < -60 ||
-      weather.temperature > 60 ||
-      weather.wind < 0 ||
-      weather.wind > 100
-    )
-      return false;
-    state.weather = weather;
-    state.location = "Вручную";
-    return true;
-  } catch {
-    return false;
-  }
-}
-
-function weatherPanel() {
-  const weather = state.weather;
-  return `<section class="weather" aria-label="Погода">
-    <strong>${weather ? `${degrees(weather.temperature)} · ${condition(weather.code)}` : escape(state.weatherStatus)}</strong>
-    <p>${escape(state.location)}${weather ? ` · ${state.location === "Вручную" ? "твой выбор" : "сейчас, ощущается " + degrees(weather.feelsLike)}` : ""}</p>
-    <div class="weather-actions"><button data-action="weather">${weather ? "Изменить погоду" : "Выбрать погоду"}</button><button data-action="location">По геопозиции</button>${state.location === "Вручную" ? '<button data-action="automatic-weather">Вернуть автопогоду</button>' : ""}</div>
-  </section>`;
+function showSeasonPicker() {
+  showDialog(
+    "Выбери сезон",
+    `<div class="season-options">${SEASONS.map((season) => `<button class="soft" data-season="${season.id}" aria-pressed="${state.season === season.id}">${escape(season.label)}</button>`).join("")}</div>`,
+  );
+  dialog.querySelectorAll("[data-season]").forEach((button) => {
+    button.onclick = () => {
+      state.season = button.dataset.season;
+      try {
+        localStorage.setItem(SEASON_KEY, state.season);
+        notify();
+      } catch {
+        notify(
+          "Не удалось сохранить сезон на устройстве. Выбор действует до перезагрузки страницы.",
+        );
+      }
+      closeDialog();
+      render();
+    };
+  });
 }
 
 function renderLooks() {
   const looks = selectLooks(catalog, state);
-  return `${weatherPanel()}
-    <div class="segments" aria-label="Повод">${[
-      ["everyday", "Повседневный"],
-      ["evening", "Вечерний"],
-    ]
-      .map(
-        ([value, label]) =>
-          `<button data-occasion="${value}" aria-pressed="${state.occasion === value}">${label}</button>`,
-      )
-      .join("")}</div>
+  return `<div class="segments" aria-label="Повод">${[
+    ["everyday", "Повседневный"],
+    ["evening", "Вечерний"],
+  ]
+    .map(
+      ([value, label]) =>
+        `<button data-occasion="${value}" aria-pressed="${state.occasion === value}">${label}</button>`,
+    )
+    .join("")}</div>
     <button class="base" data-action="base" aria-label="Сменить основу"><span>Основа: ${escape(catalog.items[state.base].name)}</span><span aria-hidden="true">Сменить ›</span></button>
     <p class="section-caption">Сочетаний: ${looks.length} · с твоими вещами</p>
     <div class="feed">${
@@ -135,9 +112,8 @@ function renderLooks() {
     </button>`,
         )
         .join("") ||
-      '<div class="empty"><span aria-hidden="true">✧</span><h2>Подходящих сочетаний пока нет</h2><p>Попробуй другую основу или повод. Новые фото пока не участвуют в подборе.</p></div>'
-    }</div>
-    <p class="advice" data-testid="weather-advice">${weatherAdvice(state.weather)}</p>`;
+      '<div class="empty"><span aria-hidden="true">✧</span><h2>Подходящих сочетаний пока нет</h2><p>Попробуй другой сезон, основу или повод.</p></div>'
+    }</div>`;
 }
 
 function hasLooks(id) {
@@ -145,33 +121,34 @@ function hasLooks(id) {
 }
 
 function renderWardrobe() {
-  const current = Object.entries(catalog.items).map(([id, item]) => ({
-    id,
-    ...item,
-    inLooks: hasLooks(id),
-  }));
-  const items =
-    state.filter === "new"
-      ? state.photos
-      : state.filter === "curated"
-        ? current.filter((item) => item.inLooks)
-        : [...current, ...state.photos];
-  return `<p class="intro">Твои вещи и сохранённые фото</p>
-    <div class="segments filters">${[
-      ["all", "Все"],
-      ["curated", "В подборе"],
-      ["new", "Новые фото"],
-    ]
-      .map(
-        ([value, label]) =>
-          `<button data-filter="${value}" aria-pressed="${state.filter === value}">${label}</button>`,
+  const items = [
+    ...Object.entries(catalog.items).map(([id, item]) => ({ id, ...item })),
+    ...state.photos,
+  ];
+  const categories = [
+    ...catalog.categories,
+    ...(state.photos.length
+      ? [{ id: "saved", label: "Сохранённые фото" }]
+      : []),
+  ];
+  return `<label class="category-picker" for="category">Категория<select id="category"><option value="all">Все категории</option>${categories.map((category) => `<option value="${escape(category.id)}" ${state.category === category.id ? "selected" : ""}>${escape(category.label)}</option>`).join("")}</select></label>
+    ${categories
+      .filter(
+        (category) =>
+          state.category === "all" || state.category === category.id,
       )
-      .join("")}</div>
-    <div class="wardrobe-grid">${items.map((item) => `<button class="item-card" data-testid="item-card" data-item="${escape(item.id)}" aria-label="${escape(item.name)}">${itemPhoto(item)}<h2>${escape(item.name)}</h2><p>${item.inLooks ? 'В подборе <span aria-hidden="true">›</span>' : "Пока без подбора"}</p></button>`).join("")}</div>
-    ${items.length ? '<p class="section-caption">Нажми на вещь, чтобы рассмотреть её или выбрать основой образов.</p>' : '<div class="empty"><h2>Новых фото пока нет</h2><p>Добавь фото с телефона — оно останется здесь.</p></div>'}`;
+      .map((category) => {
+        const group = items.filter((item) => item.category === category.id);
+        if (!group.length) return "";
+        return `<section class="wardrobe-category" data-category="${escape(category.id)}" aria-labelledby="category-${escape(category.id)}"><h2 id="category-${escape(category.id)}">${escape(category.label)}</h2><div class="wardrobe-grid">${group.map((item) => `<button class="item-card" data-testid="item-card" data-item="${escape(item.id)}" data-category="${escape(category.id)}" aria-label="${escape(item.name)}">${itemPhoto(item)}<h3>${escape(item.name)}</h3><p>${item.isSaved ? "На этом устройстве" : 'Посмотреть образы <span aria-hidden="true">›</span>'}</p></button>`).join("")}</div></section>`;
+      })
+      .join("")}`;
 }
 
 function render() {
+  const season = SEASONS.find((season) => season.id === state.season);
+  $("#season-picker").textContent = season.label;
+  $("#season-picker").setAttribute("aria-label", `Сезон: ${season.label}`);
   if (!catalog) return;
   $("#title").textContent = state.tab === "looks" ? "Образы" : "Гардероб";
   $("#content").innerHTML =
@@ -197,16 +174,16 @@ function showItem(id) {
     catalog.items[id] || state.photos.find((photo) => photo.id === id);
   showDialog(
     item.name,
-    `${itemPhoto(item)}<p class="badge">${hasLooks(id) ? "В подборе" : "Пока без подбора"}</p><p>${item.isNew ? "Фото сохранено на устройстве. Распознавание и подбор появятся позже." : hasLooks(id) ? "Для этой вещи есть готовые сочетания. Откроем их под выбранные погоду и повод." : "Для этой вещи пока нет готовых сочетаний. Вещь доступна в каталоге и при выборе основы."}</p>${item.isNew ? "" : '<button class="primary" id="use-item">Образы с этой вещью →</button>'}`,
+    `${itemPhoto(item)}<p class="badge">${hasLooks(id) ? "В подборе" : "Пока без подбора"}</p><p>${item.isSaved ? "Фото сохранено на этом устройстве и доступно для просмотра." : hasLooks(id) ? "Для этой вещи есть готовые сочетания. Откроем их под выбранные сезон и повод." : "Для этой вещи пока нет готовых сочетаний. Вещь доступна в каталоге и при выборе основы."}</p>${item.isSaved ? "" : '<button class="primary" id="use-item">Образы с этой вещью →</button>'}`,
   );
-  if (!item.isNew) $("#use-item").onclick = () => chooseBase(id);
+  if (!item.isSaved) $("#use-item").onclick = () => chooseBase(id);
 }
 
 function showLook(id) {
   const look = catalog.looks.find((look) => look.id === Number(id));
   showDialog(
     look.title,
-    `${lookArtwork(look)}<p class="artwork-caption">Визуализация образа</p><section class="look-originals" aria-labelledby="originals-title"><h3 id="originals-title">Исходные фотографии</h3><p class="section-caption">Вещи из твоего каталога.</p><div class="originals-grid">${look.items.map((id) => `<figure>${itemPhoto(catalog.items[id])}<figcaption>${escape(catalog.items[id].name)}</figcaption></figure>`).join("")}</div></section>${missingItems(look)}<h3>Почему вместе</h3><p>${escape(look.why)}</p><h3>Как носить</h3><p>${escape(look.wear)}</p><h3>По погоде</h3><p>${escape(look.weather)}</p><p class="advice">${weatherAdvice(state.weather)}</p>`,
+    `${lookArtwork(look)}<p class="artwork-caption">Визуализация образа</p><section class="look-originals" aria-labelledby="originals-title"><h3 id="originals-title">Исходные фотографии</h3><p class="section-caption">Вещи из твоего каталога.</p><div class="originals-grid">${look.items.map((id) => `<figure>${itemPhoto(catalog.items[id])}<figcaption>${escape(catalog.items[id].name)}</figcaption></figure>`).join("")}</div></section>${missingItems(look)}<h3>Почему вместе</h3><p>${escape(look.why)}</p><h3>Как носить</h3><p>${escape(look.wear)}</p><h3>По сезону</h3><p>${escape(look.seasonNote)}</p>`,
   );
 }
 
@@ -229,113 +206,17 @@ function showBasePicker() {
     );
 }
 
-function showWeatherForm() {
-  showDialog(
-    "Выбрать погоду",
-    `<form id="weather-form"><label for="temperature">Температура, °C</label><div class="temperature-control"><input id="temperature" name="temperature" type="number" inputmode="decimal" min="-60" max="60" step="any" required value="${state.weather?.temperature ?? 12}"><button class="soft" id="temperature-sign" type="button" aria-label="Сменить знак температуры">+ / −</button></div><label>Осадки<select name="precipitation"><option value="dry">Без осадков</option><option value="rain">Дождь</option><option value="snow">Снег</option></select></label><label>Ветер, м/с<input name="wind" type="number" min="0" max="100" step="any" required value="${state.weather?.wind ?? 0}"></label><button class="primary" type="submit">Применить</button></form>`,
-  );
-  $("#temperature-sign").onclick = () => {
-    const input = $("#temperature");
-    input.value = String(-Number(input.value || 0));
-    input.focus();
-  };
-  const currentCondition = state.weather && condition(state.weather.code);
-  $("#weather-form select").value =
-    currentCondition === "Снег"
-      ? "snow"
-      : state.weather?.precipitation > 0
-        ? "rain"
-        : "dry";
-  $("#weather-form").onsubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.target);
-    const temperature = Number(data.get("temperature"));
-    weatherRequest++;
-    state.weather = {
-      temperature,
-      feelsLike: temperature,
-      precipitation: data.get("precipitation") === "dry" ? 0 : 1,
-      code: { dry: 0, rain: 61, snow: 71 }[data.get("precipitation")],
-      wind: Number(data.get("wind")),
-    };
-    state.location = "Вручную";
-    try {
-      localStorage.setItem(WEATHER_KEY, JSON.stringify(state.weather));
-    } catch {
-      notify(
-        "Не удалось сохранить погоду на устройстве. Выбор действует до перезагрузки страницы.",
-      );
-    }
-    closeDialog();
-    render();
-  };
-}
-
-async function updateWeather(location, label) {
-  try {
-    localStorage.removeItem(WEATHER_KEY);
-  } catch {
-    if (state.location === "Вручную")
-      notify(
-        "Не удалось сохранить выбор автопогоды. После перезагрузки может вернуться ручная погода.",
-      );
-  }
-  const request = ++weatherRequest;
-  state.weatherStatus = "Загружаем погоду…";
-  state.weather = null;
-  state.location = label;
-  render();
-  try {
-    const weather = await loadWeather(location);
-    if (request !== weatherRequest) return;
-    state.weather = weather;
-  } catch {
-    if (request !== weatherRequest) return;
-    state.weatherStatus = "Не удалось загрузить погоду";
-  }
-  render();
-}
-
-function locate() {
-  const request = ++weatherRequest;
-  state.weatherStatus = "Определяем местоположение…";
-  state.weather = null;
-  render();
-  const failed = () => {
-    if (request !== weatherRequest) return;
-    state.weatherStatus = "Геопозиция недоступна. Выбери погоду вручную";
-    render();
-  };
-  if (!navigator.geolocation) return failed();
-  navigator.geolocation.getCurrentPosition(
-    (position) => {
-      if (request === weatherRequest)
-        updateWeather(position.coords, "Рядом с тобой");
-    },
-    failed,
-    { timeout: 8000, maximumAge: 300000 },
-  );
-}
-
 $("#content").addEventListener("click", (event) => {
   const button = event.target.closest("button");
   if (!button) return;
-  const { occasion, filter, item, look, action } = button.dataset;
+  const { occasion, item, look, action } = button.dataset;
   if (occasion) {
     state.occasion = occasion;
-    render();
-  }
-  if (filter) {
-    state.filter = filter;
     render();
   }
   if (item) showItem(item);
   if (look) showLook(look);
   if (action === "base") showBasePicker();
-  if (action === "weather") showWeatherForm();
-  if (action === "location") locate();
-  if (action === "automatic-weather")
-    updateWeather({ latitude: 55.75, longitude: 37.62 }, "Москва");
 });
 document.querySelectorAll("[data-tab]").forEach(
   (button) =>
@@ -346,20 +227,13 @@ document.querySelectorAll("[data-tab]").forEach(
     }),
 );
 
-$("#add-photo").onclick = () => {
-  showDialog(
-    "Добавить фото",
-    '<p>Сначала рассмотрим фото, затем сохраним его на устройстве.</p><div class="upload-actions"><button class="primary" id="pick-file">Выбрать с телефона</button><button class="soft" id="take-photo">Снять камерой</button></div>',
-  );
-  $("#pick-file").onclick = () => {
-    closeDialog();
-    $("#file").click();
-  };
-  $("#take-photo").onclick = () => {
-    closeDialog();
-    $("#camera").click();
-  };
-};
+$("#season-picker").onclick = showSeasonPicker;
+$("#content").addEventListener("change", (event) => {
+  if (event.target.id === "category") {
+    state.category = event.target.value;
+    render();
+  }
+});
 
 async function refreshPhotos() {
   const photos = await listPhotos();
@@ -369,63 +243,11 @@ async function refreshPhotos() {
     .map((photo) => ({
       id: photo.id,
       file: URL.createObjectURL(photo.file),
-      name: "Новое фото",
-      isNew: true,
+      name: "Сохранённое фото",
+      isSaved: true,
+      category: "saved",
     }));
 }
-
-async function previewPhoto(event) {
-  const file = event.target.files[0];
-  event.target.value = "";
-  if (!file) return;
-  notify();
-  if (file.size > 20 * 1024 * 1024)
-    return notify("Фото слишком большое. Выбери файл до 20 МБ.");
-  const url = URL.createObjectURL(file);
-  try {
-    const image = new Image();
-    image.src = url;
-    await image.decode();
-  } catch {
-    URL.revokeObjectURL(url);
-    return notify(
-      "Не удалось открыть фото. Выбери другое изображение (JPEG, PNG или WebP).",
-    );
-  }
-  showDialog(
-    "Предпросмотр",
-    `<div class="preview"><img src="${url}" alt="Новое фото"></div><p>Фото останется только на этом устройстве. Пока без подбора.</p><p id="save-error" role="alert" hidden></p><button id="save-photo" class="primary">Сохранить фото</button><button id="cancel-photo" class="text-button">Отмена</button>`,
-    () => URL.revokeObjectURL(url),
-  );
-  $("#cancel-photo").onclick = closeDialog;
-  const saveError = $("#save-error");
-  $("#save-photo").onclick = async (event) => {
-    const button = event.target;
-    button.disabled = true;
-    button.textContent = "Сохраняем…";
-    try {
-      await savePhoto(file);
-      await refreshPhotos();
-      if (button.isConnected && dialog.open) {
-        state.tab = "wardrobe";
-        state.filter = "new";
-        closeDialog();
-        window.scrollTo(0, 0);
-      }
-      render();
-    } catch {
-      if (button.isConnected && dialog.open) {
-        saveError.textContent =
-          "Не удалось сохранить фото. Проверь свободное место и доступ к хранилищу браузера.";
-        saveError.hidden = false;
-        button.disabled = false;
-        button.textContent = "Сохранить фото";
-      }
-    }
-  };
-}
-$("#file").addEventListener("change", previewPhoto);
-$("#camera").addEventListener("change", previewPhoto);
 
 async function start() {
   try {
@@ -448,6 +270,5 @@ async function start() {
   }
 }
 setupPwa(showDialog, notify);
+render();
 start();
-if (!restoreManualWeather())
-  updateWeather({ latitude: 55.75, longitude: 37.62 }, "Москва");

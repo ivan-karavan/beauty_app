@@ -92,34 +92,21 @@ h3 {
   font-weight: 650;
   white-space: nowrap;
 }
-.weather {
-  background: #edf0e9;
-  color: #59624f;
-  border-radius: 20px;
-  padding: 16px 17px;
-  margin-bottom: 16px;
+.season-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
 }
-.weather strong {
-  font-size: 20px;
+.season-options button {
+  min-height: 44px;
+  text-align: center;
 }
-.weather p {
-  font-size: 12px;
-  margin-top: 3px;
+.season-options [aria-pressed="true"] {
+  background: var(--plum);
+  color: white;
 }
-.weather-actions {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-top: 9px;
-}
-.weather-actions button {
-  font-size: 12px;
-  background: none;
-  padding: 3px 0;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  color: #59624f;
-  min-height: 32px;
+#season-picker {
+  min-height: 44px;
 }
 .segments {
   display: flex;
@@ -290,23 +277,31 @@ h3 {
   margin-top: 8px;
   color: var(--muted);
 }
-.advice {
-  font-size: 12px;
-  color: #777166;
-  line-height: 1.6;
-  background: #f5f4ed;
-  padding: 15px;
-  border-radius: 15px;
-  margin-top: 20px;
-}
-.intro {
-  font-size: 14px;
+.category-picker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
   color: var(--muted);
-  margin-bottom: 18px;
+  font-size: 13px;
 }
-.filters button {
-  flex: initial;
-  padding: 12px 15px;
+.category-picker select {
+  flex: 1;
+  min-width: 0;
+  min-height: 44px;
+  border: 1px solid #dacfd8;
+  border-radius: 12px;
+  padding: 10px;
+  background: white;
+  color: inherit;
+  font-size: 14px;
+}
+.wardrobe-category {
+  margin-bottom: 26px;
+}
+.wardrobe-category > h2 {
+  font-size: 18px;
+  margin-bottom: 14px;
 }
 .wardrobe-grid {
   display: grid;
@@ -323,7 +318,7 @@ h3 {
   aspect-ratio: 0.9;
   border-radius: 12px;
 }
-.item-card h2 {
+.item-card h3 {
   font-size: 14px;
   line-height: 1.4;
   margin: 12px 3px 6px;
@@ -346,7 +341,7 @@ h3 {
   background: #fffdfcf5;
   backdrop-filter: blur(12px);
   border-top: 1px solid #eee7ed;
-  padding: 10px 20px calc(12px + env(safe-area-inset-bottom));
+  padding: 6px 20px calc(6px + env(safe-area-inset-bottom));
 }
 .bottom-nav button {
   background: transparent;
@@ -354,12 +349,12 @@ h3 {
   flex: 1;
   text-align: center;
   font-size: 12px;
-  min-height: 48px;
+  min-height: 44px;
 }
 .bottom-nav button span {
   display: block;
-  font-size: 22px;
-  line-height: 25px;
+  font-size: 18px;
+  line-height: 20px;
 }
 .bottom-nav [aria-current] {
   color: var(--plum);
@@ -500,39 +495,6 @@ dialog .photo {
 .base-grid .photo {
   aspect-ratio: 1;
 }
-.preview img {
-  width: 100%;
-  max-height: 50dvh;
-  object-fit: contain;
-  border-radius: 12px;
-}
-.preview + p {
-  margin-top: 15px;
-  color: var(--muted);
-}
-form label {
-  display: grid;
-  gap: 8px;
-  margin: 18px 0;
-  font-size: 14px;
-}
-input,
-select {
-  border: 1px solid #dacfd8;
-  border-radius: 12px;
-  width: 100%;
-  padding: 12px;
-  background: white;
-  color: inherit;
-  font-size: 16px;
-}
-.upload-actions {
-  display: grid;
-  gap: 12px;
-}
-.upload-actions .soft {
-  text-align: center;
-}
 @media (max-width: 360px) {
   .shell {
     padding: 20px 15px 100px;
@@ -553,9 +515,6 @@ select {
   .look-copy p {
     font-size: 13px;
   }
-  .filters button {
-    padding: 12px 13px;
-  }
   .base {
     font-size: 12px;
   }
@@ -573,19 +532,6 @@ select {
   .bottom-nav {
     border-radius: 20px 20px 0 0;
   }
-}
-
-.temperature-control {
-  display: flex;
-  gap: 8px;
-}
-.temperature-control input {
-  min-width: 0;
-}
-.temperature-control button {
-  min-width: 72px;
-  text-align: center;
-  font-size: 18px;
 }
 
 .pwa-install {

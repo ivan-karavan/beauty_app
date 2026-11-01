@@ -1,44 +1,46 @@
-// Editorial priorities from the existing lookbook, not inferred fabric properties.
+export const SEASONS = [
+  { id: "winter", label: "Зима" },
+  { id: "spring", label: "Весна" },
+  { id: "summer", label: "Лето" },
+  { id: "autumn", label: "Осень" },
+];
+
+export function currentSeason(date = new Date()) {
+  return [
+    "winter",
+    "winter",
+    "spring",
+    "spring",
+    "spring",
+    "summer",
+    "summer",
+    "summer",
+    "autumn",
+    "autumn",
+    "autumn",
+    "winter",
+  ][date.getMonth()];
+}
+
 const everydayOrder = [13, 11, 12, 14, 16, 5];
 
-export function selectLooks(catalog, { base, occasion, weather }) {
+export function selectLooks(catalog, { base, occasion, season }) {
   const score = (look) => {
-    const comfort = everydayOrder.indexOf(look.id);
-    let value = occasion === "everyday" && comfort >= 0 ? 20 - comfort : 0;
-    if (weather) {
-      const layered = look.items.length > 2;
-      if (weather.temperature < 10 && layered) value += 30;
-      if (weather.temperature >= 20 && layered) value -= 30;
-      if (weather.precipitation > 0 && look.items.includes(49)) value -= 5;
-    }
-    return value;
+    const index = everydayOrder.indexOf(look.id);
+    return occasion === "everyday" && index >= 0
+      ? everydayOrder.length - index
+      : 0;
   };
   return catalog.looks
     .filter(
       (look) =>
         look.items.some((id) => String(id) === String(base)) &&
         look.items.every((id) => catalog.items[id]) &&
+        (!season || look.seasons.includes(season)) &&
         (occasion === "evening"
-          ? look.scenarios.some((s) => s.startsWith("Театр"))
-          : look.scenarios.some((s) => !s.startsWith("Театр")) &&
+          ? look.scenarios.some((value) => value.startsWith("Театр"))
+          : look.scenarios.some((value) => !value.startsWith("Театр")) &&
             ![6, 7].includes(look.id)),
     )
     .sort((a, b) => score(b) - score(a) || a.id - b.id);
-}
-
-export function weatherAdvice(weather) {
-  if (!weather)
-    return "Погода неизвестна. Показаны сочетания для помещения; условия на улице оцени отдельно.";
-  const notes = [
-    "Это основа для помещения. Состав ткани, теплота и свобода посадки по фото не установлены.",
-  ];
-  if (weather.temperature < 10)
-    notes.push("Для улицы нужно отдельное утепление и подходящая обувь.");
-  if (weather.temperature >= 20)
-    notes.push("В тепле проверь комфорт; дополнительный слой можно снять.");
-  if (weather.precipitation > 0)
-    notes.push("Осадки: проверь обувь и длину брюк, чтобы низ не намокал.");
-  if (weather.wind >= 10)
-    notes.push("Сильный ветер: потребуется защита от ветра.");
-  return notes.join(" ");
 }

@@ -1,0 +1,4170 @@
+{
+  "tool": "built-in image_gen",
+  "styleReference": "looks/accessories-casual.png",
+  "promptTemplate": "Use case: compositing, fashion product lookbook. Create ONE polished PORTRAIT 4:5 flat-lay outfit image for a wardrobe app. Image1 is STYLE REFERENCE ONLY: warm ivory paper background, subtle studio shadows, an elegant realistic main clothing silhouette on the LEFT two-thirds and a coordinated smaller accessory column on the RIGHT third. Do not copy garments from the style reference. Images2 onward are the EXACT OWNED GARMENTS named below: preserve their real colour, cut, proportions, pockets, fastenings, neckline, sleeve/leg shapes, distinctive texture and existing printed designs. Remove original bed, blanket, hangers, incidental other clothing at image edges and photo rectangles. Arrange main garments upright as one coherent wearable outfit, with believable layering and gentle folds, no person, no visible mannequin or body parts. ALSO ADD the explicitly listed supplemental clothing (if any) as part of the main outfit, AND render EVERY listed suggested accessory as its own visible object in the right column. These extras are creative suggestions, not owned clothes; their ownership labels are supplied by the app, so DO NOT write labels or any other text in the image. Keep clothing identity faithful; missing clothes and accessories may be newly designed but follow the exact colour/type descriptions below. A scarf should have natural folded/draped shape, earrings shown as a pair, bag in proportion. Do not add anything beyond the listed owned clothes and listed additions. No borders, headline, caption, numbers, watermark, interface, shop logo, extra humans or duplicate clothes. Entire garments and all accessories visible with clear 5% margins, professionally styled like the reference, detailed but uncluttered.\nSEASONAL FIT: follow the seasons assigned to this look. For summer use lightweight scarves/neckerchiefs and light footwear, never a thick wool winter scarf. For winter show the listed coat over the owned clothes and all listed warm accessories. For spring/autumn use light layering. For source48 use the REAL KNEE-LENGTH WIDE DENIM BERMUDA SHORTS, preserve their short length: NEVER turn them into long trousers or capri pants.",
+  "looks": [
+    {
+      "id": 19,
+      "title": "Принт и светлый деним",
+      "preview": "looks/previews/look-019-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 3,
+          "name": "Белая футболка с принтом Volunteer Program",
+          "file": "clothes_photos/photo_2026-11-01 14.58.56.jpeg",
+          "rotation": -90,
+          "category": "tshirts"
+        },
+        {
+          "id": 48,
+          "name": "Голубые джинсовые бермуды",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0,
+          "category": "shorts"
+        }
+      ],
+      "wear": "Футболку оставь свободно или слегка заправь спереди, если так удобнее.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 22,
+      "title": "Розовая футболка и голубые бермуды",
+      "preview": "looks/previews/look-022-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 6,
+          "name": "Светло-розовая футболка с маленьким рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.58.58 (1).jpeg",
+          "rotation": -90,
+          "category": "tshirts"
+        },
+        {
+          "id": 48,
+          "name": "Голубые джинсовые бермуды",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0,
+          "category": "shorts"
+        }
+      ],
+      "wear": "Футболку можно оставить навыпуск. Посадку и удобство пояса проверь сидя.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 25,
+      "title": "Мята под тёмным слоем",
+      "preview": "looks/previews/look-025-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 9,
+          "name": "Мятная футболка",
+          "file": "clothes_photos/photo_2026-11-01 14.59.00 (1).jpeg",
+          "rotation": -90,
+          "category": "tshirts"
+        },
+        {
+          "id": 48,
+          "name": "Голубые джинсовые бермуды",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0,
+          "category": "shorts"
+        },
+        {
+          "id": 69,
+          "name": "Тёмная куртка-рубашка с накладными карманами",
+          "file": "clothes_photos/photo_2026-11-01 16.58.37.jpeg",
+          "rotation": 180,
+          "category": "jackets"
+        }
+      ],
+      "wear": "Куртку-рубашку надень поверх футболки. Проверь, удобно ли сгибать руки в двух слоях.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 29,
+      "title": "Сиреневая вязка и светлый деним",
+      "preview": "looks/previews/look-029-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 13,
+          "name": "Чёрный топ на широких бретелях",
+          "file": "clothes_photos/photo_2026-11-01 14.59.04 (1).jpeg",
+          "rotation": -90,
+          "category": "tops"
+        },
+        {
+          "id": 51,
+          "name": "Сиреневый джемпер крупной вязки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.36.jpeg",
+          "rotation": 90,
+          "category": "sweaters"
+        },
+        {
+          "id": 48,
+          "name": "Голубые джинсовые бермуды",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0,
+          "category": "shorts"
+        }
+      ],
+      "wear": "Топ под джемпер. Проверь, хватает ли места в плечах и комфортно ли сочетание двух слоёв.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 37,
+      "title": "Красный верх и светлая основа",
+      "preview": "looks/previews/look-037-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 37,
+          "name": "Красный укороченный верх на молнии",
+          "file": "clothes_photos/photo_2026-11-01 14.59.24.jpeg",
+          "rotation": -90,
+          "category": "cardigans"
+        },
+        {
+          "id": 5,
+          "name": "Белый топ на широких бретелях",
+          "file": "clothes_photos/photo_2026-11-01 14.58.57.jpeg",
+          "rotation": -90,
+          "category": "tops"
+        },
+        {
+          "id": 48,
+          "name": "Голубые джинсовые бермуды",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0,
+          "category": "shorts"
+        }
+      ],
+      "wear": "Белый топ под верх на молнии. Проверь, остаётся ли закрыта талия, когда поднимаешь руки.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 39,
+      "title": "Зелёные рукава и светлые бермуды",
+      "preview": "looks/previews/look-039-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 42,
+          "name": "Серо-зелёное худи",
+          "file": "clothes_photos/photo_2026-11-01 14.59.28.jpeg",
+          "rotation": 0,
+          "category": "hoodies"
+        },
+        {
+          "id": 48,
+          "name": "Голубые джинсовые бермуды",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0,
+          "category": "shorts"
+        }
+      ],
+      "wear": "Худи носи навыпуск. Проверь, удобно ли двигаться в плечах и сидеть в бермудах.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 42,
+      "title": "Белая футболка с рисунком и голубой низ",
+      "preview": "looks/previews/look-042-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 52,
+          "name": "Белая футболка с маленьким красным рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.59.37 (1).jpeg",
+          "rotation": 90,
+          "category": "tshirts"
+        },
+        {
+          "id": 48,
+          "name": "Голубые джинсовые бермуды",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0,
+          "category": "shorts"
+        }
+      ],
+      "wear": "Оставь футболку свободно или слегка заправь спереди. Проверь комфорт сидя.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 46,
+      "title": "Белый лонгслив и голубые бермуды",
+      "preview": "looks/previews/look-046-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 57,
+          "name": "Белый лонгслив с маленьким красным рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.59.41 (1).jpeg",
+          "rotation": 90,
+          "category": "longsleeves"
+        },
+        {
+          "id": 48,
+          "name": "Голубые джинсовые бермуды",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0,
+          "category": "shorts"
+        }
+      ],
+      "wear": "Выбери свободную или частичную заправку по удобству. Проверь посадку сидя.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 49,
+      "title": "Тёмно-синий верх и светлый деним",
+      "preview": "looks/previews/look-049-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 62,
+          "name": "Тёмно-синий лонгслив",
+          "file": "clothes_photos/photo_2026-11-01 14.59.45.jpeg",
+          "rotation": 90,
+          "category": "longsleeves"
+        },
+        {
+          "id": 48,
+          "name": "Голубые джинсовые бермуды",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0,
+          "category": "shorts"
+        }
+      ],
+      "wear": "Лонгслив можно заправить или оставить свободно. Проверь комфорт в плечах.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 51,
+      "title": "Чёрно-белая полоска и голубые бермуды",
+      "preview": "looks/previews/look-051-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 64,
+          "name": "Лонгслив в чёрно-белую полоску",
+          "file": "clothes_photos/photo_2026-11-01 14.59.47.jpeg",
+          "rotation": -90,
+          "category": "longsleeves"
+        },
+        {
+          "id": 48,
+          "name": "Голубые джинсовые бермуды",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0,
+          "category": "shorts"
+        }
+      ],
+      "wear": "Не затягивай заправку. Посадку и свободу движений проверь сидя и при ходьбе.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 60,
+      "title": "Красное платье и светлый жилет",
+      "preview": "looks/previews/look-060-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 16,
+          "name": "Красное платье с мелким рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.59.06.jpeg",
+          "rotation": -90,
+          "category": "dresses"
+        },
+        {
+          "id": 70,
+          "name": "Светлый стёганый жилет",
+          "file": "clothes_photos/photo_2026-11-01 16.58.39.jpeg",
+          "rotation": -90,
+          "category": "vests"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 61,
+      "title": "Красное платье со светлым кардиганом",
+      "preview": "looks/previews/look-061-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 16,
+          "name": "Красное платье с мелким рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.59.06.jpeg",
+          "rotation": -90,
+          "category": "dresses"
+        },
+        {
+          "id": 22,
+          "name": "Светлый кардиган на пуговицах",
+          "file": "clothes_photos/photo_2026-11-01 14.59.11.jpeg",
+          "rotation": -90,
+          "category": "cardigans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 62,
+      "title": "Тёмный сарафан и серо-голубой верх",
+      "preview": "looks/previews/look-062-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 17,
+          "name": "Тёмный сарафан на бретелях",
+          "file": "clothes_photos/photo_2026-11-01 14.59.07.jpeg",
+          "rotation": -90,
+          "category": "dresses"
+        },
+        {
+          "id": 59,
+          "name": "Серо-голубой лонгслив",
+          "file": "clothes_photos/photo_2026-11-01 14.59.43 (1).jpeg",
+          "rotation": -90,
+          "category": "longsleeves"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 63,
+      "title": "Тёмный сарафан со светлой блузой",
+      "preview": "looks/previews/look-063-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 17,
+          "name": "Тёмный сарафан на бретелях",
+          "file": "clothes_photos/photo_2026-11-01 14.59.07.jpeg",
+          "rotation": -90,
+          "category": "dresses"
+        },
+        {
+          "id": 27,
+          "name": "Светлая блуза с длинными рукавами",
+          "file": "clothes_photos/photo_2026-11-01 14.59.15.jpeg",
+          "rotation": -90,
+          "category": "shirts"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 64,
+      "title": "Тёмное платье со светлым кардиганом",
+      "preview": "looks/previews/look-064-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 21,
+          "name": "Тёмное платье с рукавами",
+          "file": "clothes_photos/photo_2026-11-01 14.59.10.jpeg",
+          "rotation": -90,
+          "category": "dresses"
+        },
+        {
+          "id": 22,
+          "name": "Светлый кардиган на пуговицах",
+          "file": "clothes_photos/photo_2026-11-01 14.59.11.jpeg",
+          "rotation": -90,
+          "category": "cardigans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 65,
+      "title": "Тёмное платье и куртка-рубашка",
+      "preview": "looks/previews/look-065-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 21,
+          "name": "Тёмное платье с рукавами",
+          "file": "clothes_photos/photo_2026-11-01 14.59.10.jpeg",
+          "rotation": -90,
+          "category": "dresses"
+        },
+        {
+          "id": 69,
+          "name": "Тёмная куртка-рубашка с накладными карманами",
+          "file": "clothes_photos/photo_2026-11-01 16.58.37.jpeg",
+          "rotation": 180,
+          "category": "jackets"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 66,
+      "title": "Шоколадный сарафан и чёрный верх",
+      "preview": "looks/previews/look-066-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 25,
+          "name": "Коричневый приталенный сарафан",
+          "file": "clothes_photos/photo_2026-11-01 14.59.13.jpeg",
+          "rotation": -90,
+          "category": "dresses"
+        },
+        {
+          "id": 60,
+          "name": "Чёрный облегающий лонгслив",
+          "file": "clothes_photos/photo_2026-11-01 14.59.43.jpeg",
+          "rotation": 90,
+          "category": "longsleeves"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Пальто носи поверх комплекта; проверь, хватает ли места для слоёв в плечах.",
+      "additions": [
+        {
+          "name": "Длинное пальто цвета кэмел",
+          "type": "clothing"
+        },
+        {
+          "name": "Чёрные зимние ботинки",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлый объёмный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        }
+      ],
+      "extended": true,
+      "seasons": ["winter"],
+      "seasonNote": "Зимний комплект с дополнительным пальто, закрытой обувью и шарфом. Пальто и аксессуары отмечены как отсутствующие в каталоге."
+    },
+    {
+      "id": 67,
+      "title": "Шоколадный сарафан со светлой блузой",
+      "preview": "looks/previews/look-067-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 25,
+          "name": "Коричневый приталенный сарафан",
+          "file": "clothes_photos/photo_2026-11-01 14.59.13.jpeg",
+          "rotation": -90,
+          "category": "dresses"
+        },
+        {
+          "id": 27,
+          "name": "Светлая блуза с длинными рукавами",
+          "file": "clothes_photos/photo_2026-11-01 14.59.15.jpeg",
+          "rotation": -90,
+          "category": "shirts"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 68,
+      "title": "Зелёное платье со светлым кардиганом",
+      "preview": "looks/previews/look-068-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 33,
+          "name": "Тёмно-зелёное платье с длинными рукавами",
+          "file": "clothes_photos/photo_2026-11-01 14.59.21.jpeg",
+          "rotation": -90,
+          "category": "dresses"
+        },
+        {
+          "id": 22,
+          "name": "Светлый кардиган на пуговицах",
+          "file": "clothes_photos/photo_2026-11-01 14.59.11.jpeg",
+          "rotation": -90,
+          "category": "cardigans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 69,
+      "title": "Розовый акцент и асимметричная юбка",
+      "preview": "looks/previews/look-069-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 15,
+          "name": "Чёрная юбка с асимметричным низом",
+          "file": "clothes_photos/photo_2026-11-01 14.59.05.jpeg",
+          "rotation": -90,
+          "category": "skirts"
+        },
+        {
+          "id": 10,
+          "name": "Светло-розовый топ с высоким воротом",
+          "file": "clothes_photos/photo_2026-11-01 14.59.00.jpeg",
+          "rotation": -90,
+          "category": "tops"
+        },
+        {
+          "id": 20,
+          "name": "Тёмный жакет с завязками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.09.jpeg",
+          "rotation": -90,
+          "category": "jackets"
+        }
+      ],
+      "wear": "Нижний слой надень под верхний; оставь внешний слой открытым, если так удобнее. Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Серебристые серьги-кольца",
+          "type": "accessory"
+        },
+        {
+          "name": "Чёрные закрытые туфли",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 70,
+      "title": "Горчичный верх и асимметричный низ",
+      "preview": "looks/previews/look-070-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 15,
+          "name": "Чёрная юбка с асимметричным низом",
+          "file": "clothes_photos/photo_2026-11-01 14.59.05.jpeg",
+          "rotation": -90,
+          "category": "skirts"
+        },
+        {
+          "id": 38,
+          "name": "Горчичный верх с вырезом у горловины",
+          "file": "clothes_photos/photo_2026-11-01 14.59.25.jpeg",
+          "rotation": -90,
+          "category": "cardigans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 71,
+      "title": "Светлая блуза и юбка в клетку",
+      "preview": "looks/previews/look-071-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 18,
+          "name": "Юбка в чёрно-белую клетку",
+          "file": "clothes_photos/photo_2026-11-01 14.59.08 (1).jpeg",
+          "rotation": -90,
+          "category": "skirts"
+        },
+        {
+          "id": 23,
+          "name": "Светлая блуза с завязками у горловины",
+          "file": "clothes_photos/photo_2026-11-01 14.59.12.jpeg",
+          "rotation": -90,
+          "category": "shirts"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 72,
+      "title": "Голубой оттенок и чёрно-белая клетка",
+      "preview": "looks/previews/look-072-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 18,
+          "name": "Юбка в чёрно-белую клетку",
+          "file": "clothes_photos/photo_2026-11-01 14.59.08 (1).jpeg",
+          "rotation": -90,
+          "category": "skirts"
+        },
+        {
+          "id": 59,
+          "name": "Серо-голубой лонгслив",
+          "file": "clothes_photos/photo_2026-11-01 14.59.43 (1).jpeg",
+          "rotation": -90,
+          "category": "longsleeves"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 73,
+      "title": "Чёрные слои с серыми брюками",
+      "preview": "looks/previews/look-073-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 13,
+          "name": "Чёрный топ на широких бретелях",
+          "file": "clothes_photos/photo_2026-11-01 14.59.04 (1).jpeg",
+          "rotation": -90,
+          "category": "tops"
+        },
+        {
+          "id": 19,
+          "name": "Чёрный жакет с поясом и прозрачными вставками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.08.jpeg",
+          "rotation": -90,
+          "category": "jackets"
+        },
+        {
+          "id": 47,
+          "name": "Серые брюки со складками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.32.jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Нижний слой надень под верхний; оставь внешний слой открытым, если так удобнее. Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Серебристые серьги-кольца",
+          "type": "accessory"
+        },
+        {
+          "name": "Чёрные закрытые туфли",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 74,
+      "title": "Топ с узором и светлый кардиган",
+      "preview": "looks/previews/look-074-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 28,
+          "name": "Тёмный топ на бретелях с мелким узором",
+          "file": "clothes_photos/photo_2026-11-01 14.59.16.jpeg",
+          "rotation": -90,
+          "category": "tops"
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        },
+        {
+          "id": 22,
+          "name": "Светлый кардиган на пуговицах",
+          "file": "clothes_photos/photo_2026-11-01 14.59.11.jpeg",
+          "rotation": -90,
+          "category": "cardigans"
+        }
+      ],
+      "wear": "Нижний слой надень под верхний; оставь внешний слой открытым, если так удобнее. Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 75,
+      "title": "Мелкий узор под приталенным жакетом",
+      "preview": "looks/previews/look-075-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 28,
+          "name": "Тёмный топ на бретелях с мелким узором",
+          "file": "clothes_photos/photo_2026-11-01 14.59.16.jpeg",
+          "rotation": -90,
+          "category": "tops"
+        },
+        {
+          "id": 19,
+          "name": "Чёрный жакет с поясом и прозрачными вставками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.08.jpeg",
+          "rotation": -90,
+          "category": "jackets"
+        },
+        {
+          "id": 47,
+          "name": "Серые брюки со складками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.32.jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Нижний слой надень под верхний; оставь внешний слой открытым, если так удобнее. Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Серебристые серьги-кольца",
+          "type": "accessory"
+        },
+        {
+          "name": "Чёрные закрытые туфли",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 76,
+      "title": "Чёрный топ и светлый кардиган с джинсами",
+      "preview": "looks/previews/look-076-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 32,
+          "name": "Чёрный топ на тонких бретелях",
+          "file": "clothes_photos/photo_2026-11-01 14.59.20.jpeg",
+          "rotation": -90,
+          "category": "tops"
+        },
+        {
+          "id": 22,
+          "name": "Светлый кардиган на пуговицах",
+          "file": "clothes_photos/photo_2026-11-01 14.59.11.jpeg",
+          "rotation": -90,
+          "category": "cardigans"
+        },
+        {
+          "id": 53,
+          "name": "Синие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.37.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Нижний слой надень под верхний; оставь внешний слой открытым, если так удобнее. Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 77,
+      "title": "Чёрный топ и жакет с серым низом",
+      "preview": "looks/previews/look-077-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 32,
+          "name": "Чёрный топ на тонких бретелях",
+          "file": "clothes_photos/photo_2026-11-01 14.59.20.jpeg",
+          "rotation": -90,
+          "category": "tops"
+        },
+        {
+          "id": 20,
+          "name": "Тёмный жакет с завязками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.09.jpeg",
+          "rotation": -90,
+          "category": "jackets"
+        },
+        {
+          "id": 47,
+          "name": "Серые брюки со складками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.32.jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Нижний слой надень под верхний; оставь внешний слой открытым, если так удобнее. Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Серебристые серьги-кольца",
+          "type": "accessory"
+        },
+        {
+          "name": "Чёрные закрытые туфли",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 78,
+      "title": "Прозрачная блуза и широкие брюки",
+      "preview": "looks/previews/look-078-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 31,
+          "name": "Чёрная прозрачная блуза",
+          "file": "clothes_photos/photo_2026-11-01 14.59.19.jpeg",
+          "rotation": -90,
+          "category": "shirts"
+        },
+        {
+          "id": 32,
+          "name": "Чёрный топ на тонких бретелях",
+          "file": "clothes_photos/photo_2026-11-01 14.59.20.jpeg",
+          "rotation": -90,
+          "category": "tops"
+        },
+        {
+          "id": 49,
+          "name": "Тёмные широкие брюки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.34.jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Нижний слой надень под верхний; оставь внешний слой открытым, если так удобнее. Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Серебристые серьги-кольца",
+          "type": "accessory"
+        },
+        {
+          "name": "Чёрные закрытые туфли",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 79,
+      "title": "Прозрачная блуза и асимметрия",
+      "preview": "looks/previews/look-079-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 31,
+          "name": "Чёрная прозрачная блуза",
+          "file": "clothes_photos/photo_2026-11-01 14.59.19.jpeg",
+          "rotation": -90,
+          "category": "shirts"
+        },
+        {
+          "id": 32,
+          "name": "Чёрный топ на тонких бретелях",
+          "file": "clothes_photos/photo_2026-11-01 14.59.20.jpeg",
+          "rotation": -90,
+          "category": "tops"
+        },
+        {
+          "id": 15,
+          "name": "Чёрная юбка с асимметричным низом",
+          "file": "clothes_photos/photo_2026-11-01 14.59.05.jpeg",
+          "rotation": -90,
+          "category": "skirts"
+        }
+      ],
+      "wear": "Нижний слой надень под верхний; оставь внешний слой открытым, если так удобнее. Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Серебристые серьги-кольца",
+          "type": "accessory"
+        },
+        {
+          "name": "Чёрные закрытые туфли",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 80,
+      "title": "Розовая рубашка под тёмным жилетом",
+      "preview": "looks/previews/look-080-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 26,
+          "name": "Тёмный трикотажный жилет",
+          "file": "clothes_photos/photo_2026-11-01 14.59.14.jpeg",
+          "rotation": -90,
+          "category": "vests"
+        },
+        {
+          "id": 34,
+          "name": "Розовая рубашка",
+          "file": "clothes_photos/photo_2026-11-01 14.59.22 (1).jpeg",
+          "rotation": -90,
+          "category": "shirts"
+        },
+        {
+          "id": 44,
+          "name": "Бежевые широкие брюки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.30 (1).jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Нижний слой надень под верхний; оставь внешний слой открытым, если так удобнее. Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 81,
+      "title": "Тёмный жилет со светлым лонгсливом",
+      "preview": "looks/previews/look-081-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 26,
+          "name": "Тёмный трикотажный жилет",
+          "file": "clothes_photos/photo_2026-11-01 14.59.14.jpeg",
+          "rotation": -90,
+          "category": "vests"
+        },
+        {
+          "id": 65,
+          "name": "Светлый лонгслив с круглым вырезом",
+          "file": "clothes_photos/photo_2026-11-01 14.59.48.jpeg",
+          "rotation": -90,
+          "category": "longsleeves"
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Нижний слой надень под верхний; оставь внешний слой открытым, если так удобнее. Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Пальто носи поверх комплекта; проверь, хватает ли места для слоёв в плечах.",
+      "additions": [
+        {
+          "name": "Длинное пальто цвета кэмел",
+          "type": "clothing"
+        },
+        {
+          "name": "Чёрные зимние ботинки",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлый объёмный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        }
+      ],
+      "extended": true,
+      "seasons": ["winter"],
+      "seasonNote": "Зимний комплект с дополнительным пальто, закрытой обувью и шарфом. Пальто и аксессуары отмечены как отсутствующие в каталоге."
+    },
+    {
+      "id": 82,
+      "title": "Сиреневая вязка и широкий тёмный низ",
+      "preview": "looks/previews/look-082-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 51,
+          "name": "Сиреневый джемпер крупной вязки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.36.jpeg",
+          "rotation": 90,
+          "category": "sweaters"
+        },
+        {
+          "id": 13,
+          "name": "Чёрный топ на широких бретелях",
+          "file": "clothes_photos/photo_2026-11-01 14.59.04 (1).jpeg",
+          "rotation": -90,
+          "category": "tops"
+        },
+        {
+          "id": 49,
+          "name": "Тёмные широкие брюки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.34.jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Нижний слой надень под верхний; оставь внешний слой открытым, если так удобнее. Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 83,
+      "title": "Сиреневый джемпер над белой футболкой",
+      "preview": "looks/previews/look-083-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 51,
+          "name": "Сиреневый джемпер крупной вязки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.36.jpeg",
+          "rotation": 90,
+          "category": "sweaters"
+        },
+        {
+          "id": 2,
+          "name": "Белая футболка с круглым вырезом",
+          "file": "clothes_photos/photo_2026-11-01 14.58.55.jpeg",
+          "rotation": -90,
+          "category": "tshirts"
+        },
+        {
+          "id": 53,
+          "name": "Синие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.37.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Нижний слой надень под верхний; оставь внешний слой открытым, если так удобнее. Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Пальто носи поверх комплекта; проверь, хватает ли места для слоёв в плечах.",
+      "additions": [
+        {
+          "name": "Длинное пальто цвета кэмел",
+          "type": "clothing"
+        },
+        {
+          "name": "Чёрные зимние ботинки",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлый объёмный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        }
+      ],
+      "extended": true,
+      "seasons": ["winter"],
+      "seasonNote": "Зимний комплект с дополнительным пальто, закрытой обувью и шарфом. Пальто и аксессуары отмечены как отсутствующие в каталоге."
+    },
+    {
+      "id": 84,
+      "title": "Красный верх с белой футболкой и денимом",
+      "preview": "looks/previews/look-084-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 37,
+          "name": "Красный укороченный верх на молнии",
+          "file": "clothes_photos/photo_2026-11-01 14.59.24.jpeg",
+          "rotation": -90,
+          "category": "cardigans"
+        },
+        {
+          "id": 2,
+          "name": "Белая футболка с круглым вырезом",
+          "file": "clothes_photos/photo_2026-11-01 14.58.55.jpeg",
+          "rotation": -90,
+          "category": "tshirts"
+        },
+        {
+          "id": 53,
+          "name": "Синие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.37.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Нижний слой надень под верхний; оставь внешний слой открытым, если так удобнее. Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 85,
+      "title": "Белая рубашка под стёганым жилетом",
+      "preview": "looks/previews/look-085-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 24,
+          "name": "Белая рубашка",
+          "file": "clothes_photos/photo_2026-11-01 14.59.13 (1).jpeg",
+          "rotation": -90,
+          "category": "shirts"
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        },
+        {
+          "id": 70,
+          "name": "Светлый стёганый жилет",
+          "file": "clothes_photos/photo_2026-11-01 16.58.39.jpeg",
+          "rotation": -90,
+          "category": "vests"
+        }
+      ],
+      "wear": "Нижний слой надень под верхний; оставь внешний слой открытым, если так удобнее. Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 86,
+      "title": "Белая рубашка и джинсовые бермуды",
+      "preview": "looks/previews/look-086-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 24,
+          "name": "Белая рубашка",
+          "file": "clothes_photos/photo_2026-11-01 14.59.13 (1).jpeg",
+          "rotation": -90,
+          "category": "shirts"
+        },
+        {
+          "id": 48,
+          "name": "Голубые джинсовые бермуды",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0,
+          "category": "shorts"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Бермуды заканчиваются около колена: сохраняй их исходную длину.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 87,
+      "title": "Горчичный оттенок и синий деним",
+      "preview": "looks/previews/look-087-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 38,
+          "name": "Горчичный верх с вырезом у горловины",
+          "file": "clothes_photos/photo_2026-11-01 14.59.25.jpeg",
+          "rotation": -90,
+          "category": "cardigans"
+        },
+        {
+          "id": 53,
+          "name": "Синие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.37.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Пальто носи поверх комплекта; проверь, хватает ли места для слоёв в плечах.",
+      "additions": [
+        {
+          "name": "Длинное пальто цвета кэмел",
+          "type": "clothing"
+        },
+        {
+          "name": "Чёрные зимние ботинки",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлый объёмный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        }
+      ],
+      "extended": true,
+      "seasons": ["winter"],
+      "seasonNote": "Зимний комплект с дополнительным пальто, закрытой обувью и шарфом. Пальто и аксессуары отмечены как отсутствующие в каталоге."
+    },
+    {
+      "id": 88,
+      "title": "Синий свитер и серые брюки",
+      "preview": "looks/previews/look-088-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 39,
+          "name": "Свитер с широкими цветными полосами",
+          "file": "clothes_photos/photo_2026-11-01 14.59.26.jpeg",
+          "rotation": -90,
+          "category": "sweaters"
+        },
+        {
+          "id": 47,
+          "name": "Серые брюки со складками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.32.jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Пальто носи поверх комплекта; проверь, хватает ли места для слоёв в плечах.",
+      "additions": [
+        {
+          "name": "Длинное пальто цвета кэмел",
+          "type": "clothing"
+        },
+        {
+          "name": "Чёрные зимние ботинки",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлый объёмный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        }
+      ],
+      "extended": true,
+      "seasons": ["winter"],
+      "seasonNote": "Зимний комплект с дополнительным пальто, закрытой обувью и шарфом. Пальто и аксессуары отмечены как отсутствующие в каталоге."
+    },
+    {
+      "id": 89,
+      "title": "Чёрный верх и бежевые брюки",
+      "preview": "looks/previews/look-089-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 60,
+          "name": "Чёрный облегающий лонгслив",
+          "file": "clothes_photos/photo_2026-11-01 14.59.43.jpeg",
+          "rotation": 90,
+          "category": "longsleeves"
+        },
+        {
+          "id": 44,
+          "name": "Бежевые широкие брюки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.30 (1).jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 90,
+      "title": "Серо-голубая футболка и голубые джинсовые бермуды",
+      "preview": "looks/previews/look-090-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 1,
+          "name": "Серо-голубая футболка",
+          "file": "clothes_photos/photo_2026-11-01 14.58.54.jpeg",
+          "rotation": -90,
+          "category": "tshirts"
+        },
+        {
+          "id": 48,
+          "name": "Голубые джинсовые бермуды",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0,
+          "category": "shorts"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Бермуды заканчиваются около колена: сохраняй их исходную длину.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 91,
+      "title": "Белая футболка с принтом Volunteer Program и синие джинсы",
+      "preview": "looks/previews/look-091-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 3,
+          "name": "Белая футболка с принтом Volunteer Program",
+          "file": "clothes_photos/photo_2026-11-01 14.58.56.jpeg",
+          "rotation": -90,
+          "category": "tshirts"
+        },
+        {
+          "id": 53,
+          "name": "Синие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.37.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 92,
+      "title": "Белая футболка с принтом Volunteer Program и светлая фактурная кофта на молнии",
+      "preview": "looks/previews/look-092-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 3,
+          "name": "Белая футболка с принтом Volunteer Program",
+          "file": "clothes_photos/photo_2026-11-01 14.58.56.jpeg",
+          "rotation": -90,
+          "category": "tshirts"
+        },
+        {
+          "id": 44,
+          "name": "Бежевые широкие брюки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.30 (1).jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        },
+        {
+          "id": 68,
+          "name": "Светлая фактурная кофта на молнии",
+          "file": "clothes_photos/photo_2026-11-01 16.58.36.jpeg",
+          "rotation": 180,
+          "category": "cardigans"
+        }
+      ],
+      "wear": "Нижний слой надень под верхний; оставь внешний слой открытым, если так удобнее. Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 93,
+      "title": "Ярко-зелёная футболка с надписью и голубые джинсовые бермуды",
+      "preview": "looks/previews/look-093-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 4,
+          "name": "Ярко-зелёная футболка с надписью",
+          "file": "clothes_photos/photo_2026-11-01 14.58.57 (1).jpeg",
+          "rotation": -90,
+          "category": "tshirts"
+        },
+        {
+          "id": 48,
+          "name": "Голубые джинсовые бермуды",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0,
+          "category": "shorts"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Бермуды заканчиваются около колена: сохраняй их исходную длину.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 94,
+      "title": "Ярко-зелёная футболка с надписью и синие джинсы",
+      "preview": "looks/previews/look-094-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 4,
+          "name": "Ярко-зелёная футболка с надписью",
+          "file": "clothes_photos/photo_2026-11-01 14.58.57 (1).jpeg",
+          "rotation": -90,
+          "category": "tshirts"
+        },
+        {
+          "id": 53,
+          "name": "Синие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.37.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 95,
+      "title": "Светло-розовая футболка с маленьким рисунком и синие джинсы",
+      "preview": "looks/previews/look-095-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 6,
+          "name": "Светло-розовая футболка с маленьким рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.58.58 (1).jpeg",
+          "rotation": -90,
+          "category": "tshirts"
+        },
+        {
+          "id": 53,
+          "name": "Синие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.37.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 96,
+      "title": "Светло-розовая футболка с маленьким рисунком и светлая фактурная кофта на молнии",
+      "preview": "looks/previews/look-096-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 6,
+          "name": "Светло-розовая футболка с маленьким рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.58.58 (1).jpeg",
+          "rotation": -90,
+          "category": "tshirts"
+        },
+        {
+          "id": 44,
+          "name": "Бежевые широкие брюки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.30 (1).jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        },
+        {
+          "id": 68,
+          "name": "Светлая фактурная кофта на молнии",
+          "file": "clothes_photos/photo_2026-11-01 16.58.36.jpeg",
+          "rotation": 180,
+          "category": "cardigans"
+        }
+      ],
+      "wear": "Нижний слой надень под верхний; оставь внешний слой открытым, если так удобнее. Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 97,
+      "title": "Зелёная футболка с рисунком рук и голубые джинсовые бермуды",
+      "preview": "looks/previews/look-097-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 7,
+          "name": "Зелёная футболка с рисунком рук",
+          "file": "clothes_photos/photo_2026-11-01 14.58.58.jpeg",
+          "rotation": -90,
+          "category": "tshirts"
+        },
+        {
+          "id": 48,
+          "name": "Голубые джинсовые бермуды",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0,
+          "category": "shorts"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Бермуды заканчиваются около колена: сохраняй их исходную длину.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 98,
+      "title": "Зелёная футболка с рисунком рук и синие джинсы",
+      "preview": "looks/previews/look-098-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 7,
+          "name": "Зелёная футболка с рисунком рук",
+          "file": "clothes_photos/photo_2026-11-01 14.58.58.jpeg",
+          "rotation": -90,
+          "category": "tshirts"
+        },
+        {
+          "id": 53,
+          "name": "Синие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.37.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 99,
+      "title": "Ярко-розовая футболка и голубые джинсовые бермуды",
+      "preview": "looks/previews/look-099-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 8,
+          "name": "Ярко-розовая футболка",
+          "file": "clothes_photos/photo_2026-11-01 14.58.59.jpeg",
+          "rotation": -90,
+          "category": "tshirts"
+        },
+        {
+          "id": 48,
+          "name": "Голубые джинсовые бермуды",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0,
+          "category": "shorts"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Бермуды заканчиваются около колена: сохраняй их исходную длину.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 100,
+      "title": "Ярко-розовая футболка и синие джинсы",
+      "preview": "looks/previews/look-100-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 8,
+          "name": "Ярко-розовая футболка",
+          "file": "clothes_photos/photo_2026-11-01 14.58.59.jpeg",
+          "rotation": -90,
+          "category": "tshirts"
+        },
+        {
+          "id": 53,
+          "name": "Синие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.37.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 101,
+      "title": "Мятная футболка и голубые джинсовые бермуды",
+      "preview": "looks/previews/look-101-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 9,
+          "name": "Мятная футболка",
+          "file": "clothes_photos/photo_2026-11-01 14.59.00 (1).jpeg",
+          "rotation": -90,
+          "category": "tshirts"
+        },
+        {
+          "id": 48,
+          "name": "Голубые джинсовые бермуды",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0,
+          "category": "shorts"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Бермуды заканчиваются около колена: сохраняй их исходную длину.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 102,
+      "title": "Мятная футболка и синие джинсы",
+      "preview": "looks/previews/look-102-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 9,
+          "name": "Мятная футболка",
+          "file": "clothes_photos/photo_2026-11-01 14.59.00 (1).jpeg",
+          "rotation": -90,
+          "category": "tshirts"
+        },
+        {
+          "id": 53,
+          "name": "Синие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.37.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 103,
+      "title": "Белая футболка с V-образным вырезом и голубые джинсовые бермуды",
+      "preview": "looks/previews/look-103-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 11,
+          "name": "Белая футболка с V-образным вырезом",
+          "file": "clothes_photos/photo_2026-11-01 14.59.02.jpeg",
+          "rotation": -90,
+          "category": "tshirts"
+        },
+        {
+          "id": 48,
+          "name": "Голубые джинсовые бермуды",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0,
+          "category": "shorts"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Бермуды заканчиваются около колена: сохраняй их исходную длину.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 104,
+      "title": "Белая футболка с V-образным вырезом и синие джинсы",
+      "preview": "looks/previews/look-104-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 11,
+          "name": "Белая футболка с V-образным вырезом",
+          "file": "clothes_photos/photo_2026-11-01 14.59.02.jpeg",
+          "rotation": -90,
+          "category": "tshirts"
+        },
+        {
+          "id": 53,
+          "name": "Синие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.37.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 105,
+      "title": "Белая футболка с рукавом реглан и голубые джинсовые бермуды",
+      "preview": "looks/previews/look-105-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 12,
+          "name": "Белая футболка с рукавом реглан",
+          "file": "clothes_photos/photo_2026-11-01 14.59.03.jpeg",
+          "rotation": -90,
+          "category": "tshirts"
+        },
+        {
+          "id": 48,
+          "name": "Голубые джинсовые бермуды",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0,
+          "category": "shorts"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Бермуды заканчиваются около колена: сохраняй их исходную длину.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 106,
+      "title": "Белая футболка с рукавом реглан и синие джинсы",
+      "preview": "looks/previews/look-106-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 12,
+          "name": "Белая футболка с рукавом реглан",
+          "file": "clothes_photos/photo_2026-11-01 14.59.03.jpeg",
+          "rotation": -90,
+          "category": "tshirts"
+        },
+        {
+          "id": 53,
+          "name": "Синие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.37.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 107,
+      "title": "Бордовая футболка с рисунком и голубые джинсовые бермуды",
+      "preview": "looks/previews/look-107-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 14,
+          "name": "Бордовая футболка с рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.59.04.jpeg",
+          "rotation": -90,
+          "category": "tshirts"
+        },
+        {
+          "id": 48,
+          "name": "Голубые джинсовые бермуды",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0,
+          "category": "shorts"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Бермуды заканчиваются около колена: сохраняй их исходную длину.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 108,
+      "title": "Бордовая футболка с рисунком и синие джинсы",
+      "preview": "looks/previews/look-108-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 14,
+          "name": "Бордовая футболка с рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.59.04.jpeg",
+          "rotation": -90,
+          "category": "tshirts"
+        },
+        {
+          "id": 53,
+          "name": "Синие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.37.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 109,
+      "title": "Светлая блуза с завязками у горловины и синие джинсы",
+      "preview": "looks/previews/look-109-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 23,
+          "name": "Светлая блуза с завязками у горловины",
+          "file": "clothes_photos/photo_2026-11-01 14.59.12.jpeg",
+          "rotation": -90,
+          "category": "shirts"
+        },
+        {
+          "id": 53,
+          "name": "Синие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.37.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 110,
+      "title": "Леопардовый верх на молнии и серые широкие джинсы",
+      "preview": "looks/previews/look-110-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 30,
+          "name": "Леопардовый верх на молнии",
+          "file": "clothes_photos/photo_2026-11-01 14.59.18.jpeg",
+          "rotation": 0,
+          "category": "cardigans"
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 111,
+      "title": "Леопардовый верх на молнии и серые брюки со складками",
+      "preview": "looks/previews/look-111-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 30,
+          "name": "Леопардовый верх на молнии",
+          "file": "clothes_photos/photo_2026-11-01 14.59.18.jpeg",
+          "rotation": 0,
+          "category": "cardigans"
+        },
+        {
+          "id": 47,
+          "name": "Серые брюки со складками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.32.jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Пальто носи поверх комплекта; проверь, хватает ли места для слоёв в плечах.",
+      "additions": [
+        {
+          "name": "Длинное пальто цвета кэмел",
+          "type": "clothing"
+        },
+        {
+          "name": "Чёрные зимние ботинки",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлый объёмный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        }
+      ],
+      "extended": true,
+      "seasons": ["winter"],
+      "seasonNote": "Зимний комплект с дополнительным пальто, закрытой обувью и шарфом. Пальто и аксессуары отмечены как отсутствующие в каталоге."
+    },
+    {
+      "id": 112,
+      "title": "Розовая рубашка и синие джинсы",
+      "preview": "looks/previews/look-112-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 34,
+          "name": "Розовая рубашка",
+          "file": "clothes_photos/photo_2026-11-01 14.59.22 (1).jpeg",
+          "rotation": -90,
+          "category": "shirts"
+        },
+        {
+          "id": 53,
+          "name": "Синие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.37.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 113,
+      "title": "Голубая рубашка и синие джинсы",
+      "preview": "looks/previews/look-113-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 35,
+          "name": "Голубая рубашка",
+          "file": "clothes_photos/photo_2026-11-01 14.59.22.jpeg",
+          "rotation": -90,
+          "category": "shirts"
+        },
+        {
+          "id": 53,
+          "name": "Синие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.37.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 114,
+      "title": "Голубая рубашка и голубые джинсовые бермуды",
+      "preview": "looks/previews/look-114-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 35,
+          "name": "Голубая рубашка",
+          "file": "clothes_photos/photo_2026-11-01 14.59.22.jpeg",
+          "rotation": -90,
+          "category": "shirts"
+        },
+        {
+          "id": 48,
+          "name": "Голубые джинсовые бермуды",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0,
+          "category": "shorts"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Бермуды заканчиваются около колена: сохраняй их исходную длину.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 115,
+      "title": "Светлая рубашка в красную полоску и синие джинсы",
+      "preview": "looks/previews/look-115-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 36,
+          "name": "Светлая рубашка в красную полоску",
+          "file": "clothes_photos/photo_2026-11-01 14.59.23.jpeg",
+          "rotation": -90,
+          "category": "shirts"
+        },
+        {
+          "id": 53,
+          "name": "Синие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.37.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 116,
+      "title": "Светлая рубашка в красную полоску и голубые джинсовые бермуды",
+      "preview": "looks/previews/look-116-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 36,
+          "name": "Светлая рубашка в красную полоску",
+          "file": "clothes_photos/photo_2026-11-01 14.59.23.jpeg",
+          "rotation": -90,
+          "category": "shirts"
+        },
+        {
+          "id": 48,
+          "name": "Голубые джинсовые бермуды",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0,
+          "category": "shorts"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Бермуды заканчиваются около колена: сохраняй их исходную длину.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 117,
+      "title": "Джемпер в сине-белую полоску и серые широкие джинсы",
+      "preview": "looks/previews/look-117-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 40,
+          "name": "Джемпер в сине-белую полоску",
+          "file": "clothes_photos/photo_2026-11-01 14.59.27 (1).jpeg",
+          "rotation": -90,
+          "category": "sweaters"
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 118,
+      "title": "Джемпер в сине-белую полоску и серые брюки со складками",
+      "preview": "looks/previews/look-118-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 40,
+          "name": "Джемпер в сине-белую полоску",
+          "file": "clothes_photos/photo_2026-11-01 14.59.27 (1).jpeg",
+          "rotation": -90,
+          "category": "sweaters"
+        },
+        {
+          "id": 47,
+          "name": "Серые брюки со складками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.32.jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Пальто носи поверх комплекта; проверь, хватает ли места для слоёв в плечах.",
+      "additions": [
+        {
+          "name": "Длинное пальто цвета кэмел",
+          "type": "clothing"
+        },
+        {
+          "name": "Чёрные зимние ботинки",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлый объёмный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        }
+      ],
+      "extended": true,
+      "seasons": ["winter"],
+      "seasonNote": "Зимний комплект с дополнительным пальто, закрытой обувью и шарфом. Пальто и аксессуары отмечены как отсутствующие в каталоге."
+    },
+    {
+      "id": 119,
+      "title": "Голубой свитшот с рисунком и серые брюки со складками",
+      "preview": "looks/previews/look-119-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 41,
+          "name": "Голубой свитшот с рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.59.27.jpeg",
+          "rotation": -90,
+          "category": "hoodies"
+        },
+        {
+          "id": 47,
+          "name": "Серые брюки со складками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.32.jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Пальто носи поверх комплекта; проверь, хватает ли места для слоёв в плечах.",
+      "additions": [
+        {
+          "name": "Длинное пальто цвета кэмел",
+          "type": "clothing"
+        },
+        {
+          "name": "Чёрные зимние ботинки",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлый объёмный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        }
+      ],
+      "extended": true,
+      "seasons": ["winter"],
+      "seasonNote": "Зимний комплект с дополнительным пальто, закрытой обувью и шарфом. Пальто и аксессуары отмечены как отсутствующие в каталоге."
+    },
+    {
+      "id": 120,
+      "title": "Голубой свитшот с рисунком и тёмные широкие брюки",
+      "preview": "looks/previews/look-120-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 41,
+          "name": "Голубой свитшот с рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.59.27.jpeg",
+          "rotation": -90,
+          "category": "hoodies"
+        },
+        {
+          "id": 49,
+          "name": "Тёмные широкие брюки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.34.jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 121,
+      "title": "Серо-зелёное худи и серые широкие джинсы",
+      "preview": "looks/previews/look-121-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 42,
+          "name": "Серо-зелёное худи",
+          "file": "clothes_photos/photo_2026-11-01 14.59.28.jpeg",
+          "rotation": 0,
+          "category": "hoodies"
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 122,
+      "title": "Серо-зелёное худи и серые брюки со складками",
+      "preview": "looks/previews/look-122-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 42,
+          "name": "Серо-зелёное худи",
+          "file": "clothes_photos/photo_2026-11-01 14.59.28.jpeg",
+          "rotation": 0,
+          "category": "hoodies"
+        },
+        {
+          "id": 47,
+          "name": "Серые брюки со складками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.32.jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Пальто носи поверх комплекта; проверь, хватает ли места для слоёв в плечах.",
+      "additions": [
+        {
+          "name": "Длинное пальто цвета кэмел",
+          "type": "clothing"
+        },
+        {
+          "name": "Чёрные зимние ботинки",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлый объёмный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        }
+      ],
+      "extended": true,
+      "seasons": ["winter"],
+      "seasonNote": "Зимний комплект с дополнительным пальто, закрытой обувью и шарфом. Пальто и аксессуары отмечены как отсутствующие в каталоге."
+    },
+    {
+      "id": 123,
+      "title": "Тёмное худи с маленьким рисунком и серые широкие джинсы",
+      "preview": "looks/previews/look-123-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 43,
+          "name": "Тёмное худи с маленьким рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.59.29.jpeg",
+          "rotation": 0,
+          "category": "hoodies"
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 124,
+      "title": "Тёмное худи с маленьким рисунком и серые брюки со складками",
+      "preview": "looks/previews/look-124-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 43,
+          "name": "Тёмное худи с маленьким рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.59.29.jpeg",
+          "rotation": 0,
+          "category": "hoodies"
+        },
+        {
+          "id": 47,
+          "name": "Серые брюки со складками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.32.jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Пальто носи поверх комплекта; проверь, хватает ли места для слоёв в плечах.",
+      "additions": [
+        {
+          "name": "Длинное пальто цвета кэмел",
+          "type": "clothing"
+        },
+        {
+          "name": "Чёрные зимние ботинки",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлый объёмный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        }
+      ],
+      "extended": true,
+      "seasons": ["winter"],
+      "seasonNote": "Зимний комплект с дополнительным пальто, закрытой обувью и шарфом. Пальто и аксессуары отмечены как отсутствующие в каталоге."
+    },
+    {
+      "id": 125,
+      "title": "Синее худи с рисунком и серые брюки со складками",
+      "preview": "looks/previews/look-125-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 45,
+          "name": "Синее худи с рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.59.30.jpeg",
+          "rotation": 0,
+          "category": "hoodies"
+        },
+        {
+          "id": 47,
+          "name": "Серые брюки со складками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.32.jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Пальто носи поверх комплекта; проверь, хватает ли места для слоёв в плечах.",
+      "additions": [
+        {
+          "name": "Длинное пальто цвета кэмел",
+          "type": "clothing"
+        },
+        {
+          "name": "Чёрные зимние ботинки",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлый объёмный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        }
+      ],
+      "extended": true,
+      "seasons": ["winter"],
+      "seasonNote": "Зимний комплект с дополнительным пальто, закрытой обувью и шарфом. Пальто и аксессуары отмечены как отсутствующие в каталоге."
+    },
+    {
+      "id": 126,
+      "title": "Синее худи с рисунком и тёмные широкие брюки",
+      "preview": "looks/previews/look-126-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 45,
+          "name": "Синее худи с рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.59.30.jpeg",
+          "rotation": 0,
+          "category": "hoodies"
+        },
+        {
+          "id": 49,
+          "name": "Тёмные широкие брюки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.34.jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 127,
+      "title": "Светлое худи и серые широкие джинсы",
+      "preview": "looks/previews/look-127-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 46,
+          "name": "Светлое худи",
+          "file": "clothes_photos/photo_2026-11-01 14.59.31.jpeg",
+          "rotation": 0,
+          "category": "hoodies"
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 128,
+      "title": "Светлое худи и серые брюки со складками",
+      "preview": "looks/previews/look-128-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 46,
+          "name": "Светлое худи",
+          "file": "clothes_photos/photo_2026-11-01 14.59.31.jpeg",
+          "rotation": 0,
+          "category": "hoodies"
+        },
+        {
+          "id": 47,
+          "name": "Серые брюки со складками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.32.jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Пальто носи поверх комплекта; проверь, хватает ли места для слоёв в плечах.",
+      "additions": [
+        {
+          "name": "Длинное пальто цвета кэмел",
+          "type": "clothing"
+        },
+        {
+          "name": "Чёрные зимние ботинки",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлый объёмный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        }
+      ],
+      "extended": true,
+      "seasons": ["winter"],
+      "seasonNote": "Зимний комплект с дополнительным пальто, закрытой обувью и шарфом. Пальто и аксессуары отмечены как отсутствующие в каталоге."
+    },
+    {
+      "id": 129,
+      "title": "Белая футболка с маленьким красным рисунком и синие джинсы",
+      "preview": "looks/previews/look-129-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 52,
+          "name": "Белая футболка с маленьким красным рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.59.37 (1).jpeg",
+          "rotation": 90,
+          "category": "tshirts"
+        },
+        {
+          "id": 53,
+          "name": "Синие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.37.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 130,
+      "title": "Белая футболка с маленьким красным рисунком и светлая фактурная кофта на молнии",
+      "preview": "looks/previews/look-130-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 52,
+          "name": "Белая футболка с маленьким красным рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.59.37 (1).jpeg",
+          "rotation": 90,
+          "category": "tshirts"
+        },
+        {
+          "id": 44,
+          "name": "Бежевые широкие брюки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.30 (1).jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        },
+        {
+          "id": 68,
+          "name": "Светлая фактурная кофта на молнии",
+          "file": "clothes_photos/photo_2026-11-01 16.58.36.jpeg",
+          "rotation": 180,
+          "category": "cardigans"
+        }
+      ],
+      "wear": "Нижний слой надень под верхний; оставь внешний слой открытым, если так удобнее. Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 131,
+      "title": "Тёмный лонгслив с разводами и серые широкие джинсы",
+      "preview": "looks/previews/look-131-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 54,
+          "name": "Тёмный лонгслив с разводами",
+          "file": "clothes_photos/photo_2026-11-01 14.59.38.jpeg",
+          "rotation": 90,
+          "category": "longsleeves"
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 132,
+      "title": "Тёмный лонгслив с разводами и серые брюки со складками",
+      "preview": "looks/previews/look-132-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 54,
+          "name": "Тёмный лонгслив с разводами",
+          "file": "clothes_photos/photo_2026-11-01 14.59.38.jpeg",
+          "rotation": 90,
+          "category": "longsleeves"
+        },
+        {
+          "id": 47,
+          "name": "Серые брюки со складками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.32.jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Пальто носи поверх комплекта; проверь, хватает ли места для слоёв в плечах.",
+      "additions": [
+        {
+          "name": "Длинное пальто цвета кэмел",
+          "type": "clothing"
+        },
+        {
+          "name": "Чёрные зимние ботинки",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлый объёмный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        }
+      ],
+      "extended": true,
+      "seasons": ["winter"],
+      "seasonNote": "Зимний комплект с дополнительным пальто, закрытой обувью и шарфом. Пальто и аксессуары отмечены как отсутствующие в каталоге."
+    },
+    {
+      "id": 133,
+      "title": "Синяя рубашка с рисунком и синие джинсы",
+      "preview": "looks/previews/look-133-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 55,
+          "name": "Синяя рубашка с рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.59.39.jpeg",
+          "rotation": 90,
+          "category": "shirts"
+        },
+        {
+          "id": 53,
+          "name": "Синие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.37.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 134,
+      "title": "Синяя рубашка с рисунком и голубые джинсовые бермуды",
+      "preview": "looks/previews/look-134-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 55,
+          "name": "Синяя рубашка с рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.59.39.jpeg",
+          "rotation": 90,
+          "category": "shirts"
+        },
+        {
+          "id": 48,
+          "name": "Голубые джинсовые бермуды",
+          "file": "clothes_photos/photo_2026-11-01 14.59.33.jpeg",
+          "rotation": 0,
+          "category": "shorts"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Бермуды заканчиваются около колена: сохраняй их исходную длину.",
+      "additions": [
+        {
+          "name": "Небольшая коричневая сумка",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий платок с голубым рисунком",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлые кеды",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["summer"],
+      "seasonNote": "Летний комплект: лёгкие дополнения и открытая обувь либо кеды. Для прохладного вечера можно выбрать вариант с длинным рукавом."
+    },
+    {
+      "id": 135,
+      "title": "Сиреневый лонгслив и серые широкие джинсы",
+      "preview": "looks/previews/look-135-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 56,
+          "name": "Сиреневый лонгслив",
+          "file": "clothes_photos/photo_2026-11-01 14.59.40.jpeg",
+          "rotation": 90,
+          "category": "longsleeves"
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 136,
+      "title": "Сиреневый лонгслив и серые брюки со складками",
+      "preview": "looks/previews/look-136-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 56,
+          "name": "Сиреневый лонгслив",
+          "file": "clothes_photos/photo_2026-11-01 14.59.40.jpeg",
+          "rotation": 90,
+          "category": "longsleeves"
+        },
+        {
+          "id": 47,
+          "name": "Серые брюки со складками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.32.jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Пальто носи поверх комплекта; проверь, хватает ли места для слоёв в плечах.",
+      "additions": [
+        {
+          "name": "Длинное пальто цвета кэмел",
+          "type": "clothing"
+        },
+        {
+          "name": "Чёрные зимние ботинки",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлый объёмный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        }
+      ],
+      "extended": true,
+      "seasons": ["winter"],
+      "seasonNote": "Зимний комплект с дополнительным пальто, закрытой обувью и шарфом. Пальто и аксессуары отмечены как отсутствующие в каталоге."
+    },
+    {
+      "id": 137,
+      "title": "Белый лонгслив с маленьким красным рисунком и серые широкие джинсы",
+      "preview": "looks/previews/look-137-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 57,
+          "name": "Белый лонгслив с маленьким красным рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.59.41 (1).jpeg",
+          "rotation": 90,
+          "category": "longsleeves"
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 138,
+      "title": "Белый лонгслив с маленьким красным рисунком и серые брюки со складками",
+      "preview": "looks/previews/look-138-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 57,
+          "name": "Белый лонгслив с маленьким красным рисунком",
+          "file": "clothes_photos/photo_2026-11-01 14.59.41 (1).jpeg",
+          "rotation": 90,
+          "category": "longsleeves"
+        },
+        {
+          "id": 47,
+          "name": "Серые брюки со складками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.32.jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Пальто носи поверх комплекта; проверь, хватает ли места для слоёв в плечах.",
+      "additions": [
+        {
+          "name": "Длинное пальто цвета кэмел",
+          "type": "clothing"
+        },
+        {
+          "name": "Чёрные зимние ботинки",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлый объёмный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        }
+      ],
+      "extended": true,
+      "seasons": ["winter"],
+      "seasonNote": "Зимний комплект с дополнительным пальто, закрытой обувью и шарфом. Пальто и аксессуары отмечены как отсутствующие в каталоге."
+    },
+    {
+      "id": 139,
+      "title": "Ярко-розовый лонгслив и серые брюки со складками",
+      "preview": "looks/previews/look-139-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 58,
+          "name": "Ярко-розовый лонгслив",
+          "file": "clothes_photos/photo_2026-11-01 14.59.41.jpeg",
+          "rotation": 90,
+          "category": "longsleeves"
+        },
+        {
+          "id": 47,
+          "name": "Серые брюки со складками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.32.jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Пальто носи поверх комплекта; проверь, хватает ли места для слоёв в плечах.",
+      "additions": [
+        {
+          "name": "Длинное тёмно-серое пальто",
+          "type": "clothing"
+        },
+        {
+          "name": "Чёрные зимние ботинки",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлый объёмный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        }
+      ],
+      "extended": true,
+      "seasons": ["winter"],
+      "seasonNote": "Зимний комплект с дополнительным пальто, закрытой обувью и шарфом. Пальто и аксессуары отмечены как отсутствующие в каталоге."
+    },
+    {
+      "id": 140,
+      "title": "Ярко-розовый лонгслив и тёмные широкие брюки",
+      "preview": "looks/previews/look-140-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 58,
+          "name": "Ярко-розовый лонгслив",
+          "file": "clothes_photos/photo_2026-11-01 14.59.41.jpeg",
+          "rotation": 90,
+          "category": "longsleeves"
+        },
+        {
+          "id": 49,
+          "name": "Тёмные широкие брюки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.34.jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 141,
+      "title": "Тёмно-серый лонгслив и серые широкие джинсы",
+      "preview": "looks/previews/look-141-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 61,
+          "name": "Тёмно-серый лонгслив",
+          "file": "clothes_photos/photo_2026-11-01 14.59.44.jpeg",
+          "rotation": 90,
+          "category": "longsleeves"
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 142,
+      "title": "Тёмно-серый лонгслив и серые брюки со складками",
+      "preview": "looks/previews/look-142-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 61,
+          "name": "Тёмно-серый лонгслив",
+          "file": "clothes_photos/photo_2026-11-01 14.59.44.jpeg",
+          "rotation": 90,
+          "category": "longsleeves"
+        },
+        {
+          "id": 47,
+          "name": "Серые брюки со складками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.32.jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Пальто носи поверх комплекта; проверь, хватает ли места для слоёв в плечах.",
+      "additions": [
+        {
+          "name": "Длинное пальто цвета кэмел",
+          "type": "clothing"
+        },
+        {
+          "name": "Чёрные зимние ботинки",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлый объёмный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        }
+      ],
+      "extended": true,
+      "seasons": ["winter"],
+      "seasonNote": "Зимний комплект с дополнительным пальто, закрытой обувью и шарфом. Пальто и аксессуары отмечены как отсутствующие в каталоге."
+    },
+    {
+      "id": 143,
+      "title": "Тёмно-синий лонгслив и серые широкие джинсы",
+      "preview": "looks/previews/look-143-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 62,
+          "name": "Тёмно-синий лонгслив",
+          "file": "clothes_photos/photo_2026-11-01 14.59.45.jpeg",
+          "rotation": 90,
+          "category": "longsleeves"
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 144,
+      "title": "Тёмно-синий лонгслив и серые брюки со складками",
+      "preview": "looks/previews/look-144-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 62,
+          "name": "Тёмно-синий лонгслив",
+          "file": "clothes_photos/photo_2026-11-01 14.59.45.jpeg",
+          "rotation": 90,
+          "category": "longsleeves"
+        },
+        {
+          "id": 47,
+          "name": "Серые брюки со складками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.32.jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Пальто носи поверх комплекта; проверь, хватает ли места для слоёв в плечах.",
+      "additions": [
+        {
+          "name": "Длинное пальто цвета кэмел",
+          "type": "clothing"
+        },
+        {
+          "name": "Чёрные зимние ботинки",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлый объёмный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        }
+      ],
+      "extended": true,
+      "seasons": ["winter"],
+      "seasonNote": "Зимний комплект с дополнительным пальто, закрытой обувью и шарфом. Пальто и аксессуары отмечены как отсутствующие в каталоге."
+    },
+    {
+      "id": 145,
+      "title": "Лонгслив в тонкую сине-белую полоску и серые широкие джинсы",
+      "preview": "looks/previews/look-145-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 63,
+          "name": "Лонгслив в тонкую сине-белую полоску",
+          "file": "clothes_photos/photo_2026-11-01 14.59.46.jpeg",
+          "rotation": -90,
+          "category": "longsleeves"
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 146,
+      "title": "Лонгслив в тонкую сине-белую полоску и серые брюки со складками",
+      "preview": "looks/previews/look-146-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 63,
+          "name": "Лонгслив в тонкую сине-белую полоску",
+          "file": "clothes_photos/photo_2026-11-01 14.59.46.jpeg",
+          "rotation": -90,
+          "category": "longsleeves"
+        },
+        {
+          "id": 47,
+          "name": "Серые брюки со складками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.32.jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Пальто носи поверх комплекта; проверь, хватает ли места для слоёв в плечах.",
+      "additions": [
+        {
+          "name": "Длинное пальто цвета кэмел",
+          "type": "clothing"
+        },
+        {
+          "name": "Чёрные зимние ботинки",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлый объёмный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        }
+      ],
+      "extended": true,
+      "seasons": ["winter"],
+      "seasonNote": "Зимний комплект с дополнительным пальто, закрытой обувью и шарфом. Пальто и аксессуары отмечены как отсутствующие в каталоге."
+    },
+    {
+      "id": 147,
+      "title": "Лонгслив в чёрно-белую полоску и серые широкие джинсы",
+      "preview": "looks/previews/look-147-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 64,
+          "name": "Лонгслив в чёрно-белую полоску",
+          "file": "clothes_photos/photo_2026-11-01 14.59.47.jpeg",
+          "rotation": -90,
+          "category": "longsleeves"
+        },
+        {
+          "id": 50,
+          "name": "Серые широкие джинсы",
+          "file": "clothes_photos/photo_2026-11-01 14.59.35.jpeg",
+          "rotation": 0,
+          "category": "jeans"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    },
+    {
+      "id": 148,
+      "title": "Лонгслив в чёрно-белую полоску и серые брюки со складками",
+      "preview": "looks/previews/look-148-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 64,
+          "name": "Лонгслив в чёрно-белую полоску",
+          "file": "clothes_photos/photo_2026-11-01 14.59.47.jpeg",
+          "rotation": -90,
+          "category": "longsleeves"
+        },
+        {
+          "id": 47,
+          "name": "Серые брюки со складками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.32.jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Пальто носи поверх комплекта; проверь, хватает ли места для слоёв в плечах.",
+      "additions": [
+        {
+          "name": "Длинное пальто цвета кэмел",
+          "type": "clothing"
+        },
+        {
+          "name": "Чёрные зимние ботинки",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлый объёмный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        }
+      ],
+      "extended": true,
+      "seasons": ["winter"],
+      "seasonNote": "Зимний комплект с дополнительным пальто, закрытой обувью и шарфом. Пальто и аксессуары отмечены как отсутствующие в каталоге."
+    },
+    {
+      "id": 149,
+      "title": "Лонгслив в розово-белую полоску и серые брюки со складками",
+      "preview": "looks/previews/look-149-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 67,
+          "name": "Лонгслив в розово-белую полоску",
+          "file": "clothes_photos/photo_2026-11-01 14.59.50.jpeg",
+          "rotation": -90,
+          "category": "longsleeves"
+        },
+        {
+          "id": 47,
+          "name": "Серые брюки со складками",
+          "file": "clothes_photos/photo_2026-11-01 14.59.32.jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно. Пальто носи поверх комплекта; проверь, хватает ли места для слоёв в плечах.",
+      "additions": [
+        {
+          "name": "Длинное пальто цвета кэмел",
+          "type": "clothing"
+        },
+        {
+          "name": "Чёрные зимние ботинки",
+          "type": "accessory"
+        },
+        {
+          "name": "Светлый объёмный шарф",
+          "type": "accessory"
+        },
+        {
+          "name": "Небольшая чёрная сумка",
+          "type": "accessory"
+        }
+      ],
+      "extended": true,
+      "seasons": ["winter"],
+      "seasonNote": "Зимний комплект с дополнительным пальто, закрытой обувью и шарфом. Пальто и аксессуары отмечены как отсутствующие в каталоге."
+    },
+    {
+      "id": 150,
+      "title": "Лонгслив в розово-белую полоску и тёмные широкие брюки",
+      "preview": "looks/previews/look-150-seasonal-v3.jpg",
+      "sources": [
+        {
+          "id": 67,
+          "name": "Лонгслив в розово-белую полоску",
+          "file": "clothes_photos/photo_2026-11-01 14.59.50.jpeg",
+          "rotation": -90,
+          "category": "longsleeves"
+        },
+        {
+          "id": 49,
+          "name": "Тёмные широкие брюки",
+          "file": "clothes_photos/photo_2026-11-01 14.59.34.jpeg",
+          "rotation": 0,
+          "category": "trousers"
+        }
+      ],
+      "wear": "Проверь свободу рук, удобство сидя и длину низа. Заправляй верх только если это удобно.",
+      "additions": [
+        {
+          "name": "Коричневая сумка через плечо",
+          "type": "accessory"
+        },
+        {
+          "name": "Лёгкий бордовый платок",
+          "type": "accessory"
+        },
+        {
+          "name": "Золотистые серьги-кольца",
+          "type": "accessory"
+        }
+      ],
+      "extended": false,
+      "seasons": ["spring", "autumn"],
+      "seasonNote": "Для весны и осени: закрытый верх, спокойные слои и обувь для города. Плотность и посадку вещей проверь перед выходом."
+    }
+  ]
+}

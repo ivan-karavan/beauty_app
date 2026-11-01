@@ -18,7 +18,7 @@
     />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'; worker-src 'self'; manifest-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob:; connect-src 'self' https://api.open-meteo.com; object-src 'none'; base-uri 'none'; form-action 'none'"
+      content="default-src 'self'; script-src 'self'; worker-src 'self'; manifest-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'"
     />
     <title>Личный гардероб</title>
     <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
@@ -38,7 +38,9 @@
           <p class="eyebrow">ЛИЧНЫЙ ГАРДЕРОБ</p>
           <h1 id="title">Образы</h1>
         </div>
-        <button id="add-photo" class="soft">+ Добавить фото</button>
+        <button id="season-picker" class="soft" aria-label="Сезон">
+          Сезон
+        </button>
       </header>
       <aside id="pwa-update" class="pwa-update" role="status" hidden>
         <p>Доступна новая версия.</p>
@@ -50,26 +52,16 @@
         <button id="install-app" class="soft pwa-install">
           Добавить на главный экран
         </button>
-        <p>Добавленные фото — только на этом устройстве.</p>
         <details>
-          <summary>О хранении и погоде</summary>
+          <summary>О хранении и настройках</summary>
           <p>
-            Новые фото хранятся в этом браузере. Исходный каталог и коллажи
-            опубликованы на сайте. Синхронизации и резервного копирования нет:
-            очистка данных браузера может удалить добавленные фото.
-            Распознавание новых фото появится позже.
+            Выбранный сезон сохраняется на этом устройстве. Ранее сохранённые
+            фото доступны только для просмотра в этом браузере.
           </p>
           <p>
-            Наружу уходят только координаты для погоды. Прогноз:
-            <a href="https://open-meteo.com/" target="_blank" rel="noreferrer"
-              >Open-Meteo</a
-            >,
-            <a
-              href="https://creativecommons.org/licenses/by/4.0/"
-              target="_blank"
-              rel="noreferrer"
-              >CC BY 4.0</a
-            >.
+            Исходный каталог и визуализации опубликованы на сайте. Синхронизации
+            и резервного копирования нет: очистка данных браузера может удалить
+            сохранённые фото и настройки.
           </p>
         </details>
       </footer>
@@ -82,27 +74,12 @@
         </button>
       </nav>
     </div>
-    <input
-      id="file"
-      aria-label="Фото с устройства"
-      type="file"
-      accept="image/*"
-      hidden
-    />
-    <input
-      id="camera"
-      aria-label="Фото с камеры"
-      type="file"
-      accept="image/*"
-      capture="environment"
-      hidden
-    />
     <dialog aria-labelledby="dialog-title">
       <button class="close" aria-label="Закрыть">×</button>
       <div id="dialog-content"></div>
     </dialog>
     <noscript
-      >Для подбора образов и сохранения фото включи JavaScript.</noscript
+      >Для просмотра гардероба и подбора образов включи JavaScript.</noscript
     >
   </body>
 </html>

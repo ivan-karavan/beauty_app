@@ -1,57 +1,86 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync, existsSync, readdirSync } from "node:fs";
-import { selectLooks, weatherAdvice } from "../src/looks.js";
+import { selectLooks, SEASONS, currentSeason } from "../src/looks.js";
 
 const catalog = JSON.parse(
   readFileSync(new URL("../looks/looks.json", import.meta.url)),
 );
-const choose = (options = {}, data = catalog) =>
-  selectLooks(data, { base: "49", occasion: "everyday", ...options });
 
-test("keeps the required item and only currently owned items", () => {
-  assert.deepEqual(
-    choose()
-      .map((x) => x.id)
-      .sort((a, b) => a - b),
-    [1, 5, 9, 16],
-  );
+test("keeps the required item and only currently owned clothes", () => {
+  const choose = (data) =>
+    selectLooks(data, { base: "49", occasion: "everyday" });
+  assert.ok(choose(catalog).length > 0);
+  assert.ok(choose(catalog).every((look) => look.items.includes(49)));
   const items = { ...catalog.items };
   delete items["35"];
-  assert.ok(!choose({}, { ...catalog, items }).some((x) => x.id === 1));
-  assert.deepEqual(choose({ base: "missing" }), []);
-});
-
-test("evening selects harmonious theatre combinations, everyday prioritizes movement", () => {
+  assert.ok(!choose({ ...catalog, items }).some((look) => look.id === 1));
   assert.deepEqual(
-    choose({ base: "66", occasion: "evening" }).map((x) => x.id),
-    [3, 8],
+    selectLooks(catalog, { base: "missing", occasion: "everyday" }),
+    [],
   );
-  assert.equal(choose({ base: "53" })[0].id, 13);
-  assert.deepEqual(choose({ base: "31" }), []);
-  assert.equal(choose({ base: "31", occasion: "evening" })[0].id, 7);
 });
 
-test("weather changes layering priority without inventing garment warmth", () => {
-  const cold = choose({
-    base: "66",
-    weather: { temperature: -5, precipitation: 0, wind: 3 },
-  });
-  const warm = choose({
-    base: "66",
-    weather: { temperature: 24, precipitation: 0, wind: 3 },
-  });
-  assert.equal(cold[0].id, 14);
-  assert.notEqual(warm[0].id, 14);
-  assert.match(
-    weatherAdvice({ temperature: -5, precipitation: 2, wind: 12 }),
-    /утепление/,
+test("season and occasion select only relevant prepared looks", () => {
+  const data = {
+    items: { 1: {}, 2: {}, 3: {} },
+    looks: [
+      { id: 101, items: [1, 2], seasons: ["summer"], scenarios: ["Друзья"] },
+      { id: 102, items: [1, 3], seasons: ["winter"], scenarios: ["Поездки"] },
+      {
+        id: 103,
+        items: [1],
+        seasons: ["winter"],
+        scenarios: ["Театр · нарядно"],
+      },
+    ],
+  };
+  assert.deepEqual(
+    selectLooks(data, {
+      base: "1",
+      occasion: "everyday",
+      season: "winter",
+    }).map((x) => x.id),
+    [102],
   );
-  assert.match(
-    weatherAdvice({ temperature: -5, precipitation: 2, wind: 12 }),
-    /осадки/i,
+  assert.deepEqual(
+    selectLooks(data, {
+      base: "1",
+      occasion: "everyday",
+      season: "summer",
+    }).map((x) => x.id),
+    [101],
   );
-  assert.match(weatherAdvice(null), /неизвестна/);
+  assert.deepEqual(
+    selectLooks(data, { base: "1", occasion: "evening", season: "winter" }).map(
+      (x) => x.id,
+    ),
+    [103],
+  );
+  assert.deepEqual(
+    selectLooks(data, { base: "1", occasion: "everyday", season: "spring" }),
+    [],
+  );
+});
+
+test("current season follows calendar months", () => {
+  const expected = [
+    "winter",
+    "winter",
+    "spring",
+    "spring",
+    "spring",
+    "summer",
+    "summer",
+    "summer",
+    "autumn",
+    "autumn",
+    "autumn",
+    "winter",
+  ];
+  expected.forEach((season, month) =>
+    assert.equal(currentSeason(new Date(2026, month, 15)), season),
+  );
 });
 
 test("catalog references real photos and every look uses current catalog", () => {
@@ -65,7 +94,7 @@ test("catalog references real photos and every look uses current catalog", () =>
       assert.ok(catalog.items[id], `${look.id}: ${id}`);
 });
 
-test("catalog includes every originally submitted photo", () => {
+test("catalog includes every submitted photo exactly once", () => {
   const submitted = readdirSync(new URL("../clothes_photos/", import.meta.url))
     .filter((file) => file.endsWith(".jpeg"))
     .sort();
@@ -75,12 +104,65 @@ test("catalog includes every originally submitted photo", () => {
   assert.deepEqual(included, submitted);
 });
 
-test("every catalog item participates in at least one prepared look", () => {
-  const included = new Set(
-    catalog.looks.flatMap((look) => look.items).map(String),
+test("every garment has at least three distinct clothing combinations", () => {
+  const signature = (look) =>
+    JSON.stringify([
+      [...look.items].sort((a, b) => a - b),
+      (look.additions || [])
+        .filter((x) => x.type === "clothing")
+        .map((x) => x.name)
+        .sort(),
+    ]);
+  const missing = Object.keys(catalog.items).filter(
+    (id) =>
+      new Set(
+        catalog.looks
+          .filter((look) => look.items.includes(Number(id)))
+          .map(signature),
+      ).size < 3,
   );
   assert.deepEqual(
-    Object.keys(catalog.items).filter((id) => !included.has(id)),
+    missing,
     [],
+    "Accessories alone must not count as a different clothing combination",
   );
+});
+
+test("all items are assigned to declared wardrobe categories", () => {
+  assert.ok(Array.isArray(catalog.categories));
+  const ids = new Set(catalog.categories.map((x) => x.id));
+  for (const id of [
+    "tshirts",
+    "longsleeves",
+    "sweaters",
+    "cardigans",
+    "hoodies",
+    "shorts",
+    "jeans",
+    "trousers",
+    "skirts",
+    "dresses",
+  ])
+    assert.ok(ids.has(id), id);
+  for (const [id, item] of Object.entries(catalog.items))
+    assert.ok(ids.has(item.category), id);
+  assert.equal(catalog.items[48].category, "shorts");
+});
+
+test("all looks have explicit seasonal suitability", () => {
+  const seasons = new Set(SEASONS.map((x) => x.id));
+  for (const look of catalog.looks) {
+    assert.ok(
+      Array.isArray(look.seasons) && look.seasons.length > 0,
+      String(look.id),
+    );
+    assert.ok(
+      look.seasons.every((season) => seasons.has(season)),
+      String(look.id),
+    );
+    assert.ok(
+      typeof look.seasonNote === "string" && look.seasonNote.length > 0,
+      String(look.id),
+    );
+  }
 });

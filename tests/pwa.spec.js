@@ -2,6 +2,7 @@ import { test, expect, chromium } from "@playwright/test";
 import { mkdtemp, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
+import { chooseSeason, seedLegacyPhoto } from "./helpers.js";
 
 test.skip(
   !process.env.SITE_PATH,
@@ -17,7 +18,6 @@ async function controlled(page) {
 }
 
 test.beforeEach(async ({ page }) => {
-  await page.route("https://api.open-meteo.com/**", (route) => route.abort());
   await page.goto("./");
 });
 
@@ -32,7 +32,6 @@ test("production manifest and worker make the project subpath installable", asyn
   });
   try {
     const page = await context.newPage();
-    await page.route("https://api.open-meteo.com/**", (route) => route.abort());
     await page.goto(baseURL);
     await expect(page.locator('link[rel="manifest"]')).toHaveAttribute(
       "href",
@@ -64,15 +63,14 @@ test("production manifest and worker make the project subpath installable", asyn
   }
 });
 
-test("offline reload keeps manual weather uploaded photos and opened artwork", async ({
+test("offline reload keeps season legacy photos and opened artwork", async ({
   page,
   context,
 }) => {
   await controlled(page);
-  await page.getByRole("button", { name: "Выбрать погоду" }).click();
-  await page.getByLabel("Температура, °C").fill("-7");
-  await page.getByLabel("Осадки").selectOption("snow");
-  await page.getByRole("button", { name: "Применить" }).click();
+  await seedLegacyPhoto(page);
+  await page.reload();
+  await chooseSeason(page, "autumn");
   const artwork = page.getByTestId("look-card").first().locator("img");
   await artwork.scrollIntoViewIfNeeded();
   await expect
@@ -87,14 +85,11 @@ test("offline reload keeps manual weather uploaded photos and opened artwork", a
       ),
     )
     .toBe(true);
-  await page
-    .getByLabel("Фото с устройства")
-    .setInputFiles("clothes_photos/photo_2026-11-01 14.59.34.jpeg");
-  await page.getByRole("button", { name: "Сохранить фото" }).click();
-  await expect(page.getByTestId("item-card")).toHaveCount(1);
   await context.setOffline(true);
   await page.reload();
-  await expect(page.getByText("−7° · Снег", { exact: true })).toBeVisible();
+  await expect(page.locator("#season-picker")).toHaveAccessibleName(
+    "Сезон: Осень",
+  );
   const cachedArtwork = page.locator(`img[src="${source}"]`);
   await cachedArtwork.scrollIntoViewIfNeeded();
   await expect
@@ -103,7 +98,7 @@ test("offline reload keeps manual weather uploaded photos and opened artwork", a
     )
     .toBe(true);
   await page.getByRole("button", { name: "Гардероб", exact: true }).click();
-  await page.getByRole("button", { name: "Новые фото", exact: true }).click();
+  await page.getByLabel("Категория").selectOption("saved");
   await expect(page.getByTestId("item-card")).toHaveCount(1);
   await expect
     .poll(() =>
@@ -119,14 +114,9 @@ test("worker update preserves local data and other applications caches", async (
   page,
 }) => {
   await controlled(page);
-  await page.getByRole("button", { name: "Выбрать погоду" }).click();
-  await page.getByLabel("Температура, °C").fill("-3");
-  await page.getByRole("button", { name: "Применить" }).click();
-  await page
-    .getByLabel("Фото с устройства")
-    .setInputFiles("clothes_photos/photo_2026-11-01 14.59.34.jpeg");
-  await page.getByRole("button", { name: "Сохранить фото" }).click();
-  await expect(page.getByTestId("item-card")).toHaveCount(1);
+  await seedLegacyPhoto(page);
+  await page.reload();
+  await chooseSeason(page, "summer");
   await page.evaluate(async () => {
     const registration = await navigator.serviceWorker.ready;
     const foreign = await caches.open("gym-test-cache");
@@ -145,7 +135,9 @@ test("worker update preserves local data and other applications caches", async (
   await page
     .getByRole("button", { name: "Обновить приложение", exact: true })
     .click();
-  await expect(page.getByText("−3° · Ясно", { exact: true })).toBeVisible();
+  await expect(page.locator("#season-picker")).toHaveAccessibleName(
+    "Сезон: Лето",
+  );
   await expect
     .poll(() =>
       page.evaluate(() =>
@@ -156,7 +148,7 @@ test("worker update preserves local data and other applications caches", async (
     )
     .toBe(true);
   await page.getByRole("button", { name: "Гардероб", exact: true }).click();
-  await page.getByRole("button", { name: "Новые фото", exact: true }).click();
+  await page.getByLabel("Категория").selectOption("saved");
   await expect(page.getByTestId("item-card")).toHaveCount(1);
   const names = await page.evaluate(() => caches.keys());
   expect(names).toContain("gym-test-cache");
