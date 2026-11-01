@@ -246,9 +246,12 @@ for (const season of seasons)
       .get("looks/looks.json")
       .then((response) => response.json());
     await chooseSeason(page, season);
-    for (const look of catalog.looks.filter(
-      (look) => look.seasons[0] === season,
-    )) {
+    // Test each multi-season look once without concentrating all of them in spring.
+    const batch = catalog.looks.filter(
+      (look) => look.seasons[(look.id - 1) % look.seasons.length] === season,
+    );
+    expect(batch.length).toBeGreaterThan(0);
+    for (const look of batch) {
       await page
         .locator(
           `[data-occasion="${look.scenarios.some((value) => value.startsWith("Театр")) ? "evening" : "everyday"}"]`,
